@@ -12,7 +12,7 @@ export function Cta() {
       />
       <Container className="relative text-center">
         <FadeIn>
-          <h2 className="mx-auto max-w-2xl text-balance break-keep text-2xl font-bold leading-[1.35] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
+          <h2 className="mx-auto max-w-2xl text-balance text-2xl font-bold leading-[1.35] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
             {site.cta.title}
           </h2>
         </FadeIn>

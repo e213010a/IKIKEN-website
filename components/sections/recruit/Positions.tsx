@@ -16,7 +16,7 @@ export function Positions({ eyebrow, title, body }: PositionsProps) {
           <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h2 className="text-2xl font-bold break-keep tracking-[0.15em] text-navy-950 sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-[0.15em] text-navy-950 sm:text-3xl">
             {title}
           </h2>
           <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">

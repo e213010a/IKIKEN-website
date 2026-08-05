@@ -27,7 +27,7 @@ export function Solution() {
                 <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
                   {i === 0 ? "Courseware" : "AI"}
                 </span>
-                <h3 className="mt-4 text-lg font-bold break-keep text-navy-950">{feature.title}</h3>
+                <h3 className="mt-4 text-lg font-bold text-navy-950">{feature.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">{feature.body}</p>
                 <div className="mt-8 aspect-video w-full rounded-xl border border-navy-950/8 bg-gradient-to-br from-teal-300/15 to-coral-300/15" />
               </div>

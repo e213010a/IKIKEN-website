@@ -17,7 +17,7 @@ export function NewsTeaser() {
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
               {site.newsTeaser.eyebrow}
             </p>
-            <h2 className="mt-2 text-xl font-bold break-keep tracking-[0.15em] text-navy-950">
+            <h2 className="mt-2 text-xl font-bold tracking-[0.15em] text-navy-950">
               {site.newsTeaser.title}
             </h2>
           </div>

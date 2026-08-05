@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { type ReactNode } from "react";
+import clsx from "clsx";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 type RevealProps = {
@@ -16,7 +17,7 @@ export function Reveal({ children, className, stagger = 0.12, once = true }: Rev
 
   return (
     <motion.div
-      className={className}
+      className={clsx("min-w-0", className)}
       initial={prefersReducedMotion ? false : "hidden"}
       whileInView="visible"
       viewport={{ once, amount: 0.25 }}
@@ -29,7 +30,7 @@ export function Reveal({ children, className, stagger = 0.12, once = true }: Rev
 
 export function RevealItem({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <motion.div className={className} variants={fadeUp}>
+    <motion.div className={clsx("min-w-0", className)} variants={fadeUp}>
       {children}
     </motion.div>
   );

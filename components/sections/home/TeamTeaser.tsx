@@ -9,7 +9,7 @@ export function TeamTeaser() {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
-        <FadeIn>
+        <FadeIn className="w-full">
           <SectionHeading
             eyebrow={site.team.eyebrow}
             title={site.team.title}

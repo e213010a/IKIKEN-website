@@ -29,7 +29,7 @@ export function TeamGrid({ members, id, eyebrow, title, body }: TeamGridProps) {
                   Photo
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold break-keep text-navy-950">{member.name}</h3>
+                  <h3 className="text-lg font-bold text-navy-950">{member.name}</h3>
                   <p className="mt-1 text-sm font-medium text-teal-600">{member.role}</p>
                   <p className="mt-3 text-sm leading-relaxed text-ink-muted">{member.bio}</p>
                 </div>

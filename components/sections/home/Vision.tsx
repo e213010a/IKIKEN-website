@@ -23,7 +23,7 @@ export function Vision({ eyebrow, quote, tone = "light" }: VisionProps) {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="mx-auto max-w-3xl text-balance break-keep font-heading text-xl font-bold leading-[1.8] tracking-[0.15em] text-navy-950 sm:text-2xl lg:text-[1.75rem]">
+          <p className="mx-auto max-w-3xl text-balance font-heading text-xl font-bold leading-[1.8] tracking-[0.15em] text-navy-950 sm:text-2xl lg:text-[1.75rem]">
             {quote}
           </p>
         </FadeIn>

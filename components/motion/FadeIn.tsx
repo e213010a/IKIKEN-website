@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { type ReactNode } from "react";
+import clsx from "clsx";
 import { duration, easing } from "@/lib/motion";
 
 type FadeInProps = {
@@ -17,7 +18,7 @@ export function FadeIn({ children, className, delay = 0, y = 28, once = true }: 
 
   return (
     <motion.div
-      className={className}
+      className={clsx("min-w-0", className)}
       initial={prefersReducedMotion ? false : { opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, amount: 0.3 }}

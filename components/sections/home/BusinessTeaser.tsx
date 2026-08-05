@@ -8,7 +8,7 @@ export function BusinessTeaser() {
   return (
     <section className="bg-paper py-28 sm:py-36">
       <Container className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
-        <FadeIn>
+        <FadeIn className="w-full">
           <SectionHeading
             eyebrow={site.businessTeaser.eyebrow}
             title={site.businessTeaser.title}

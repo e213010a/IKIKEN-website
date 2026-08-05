@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Parallax } from "@/components/motion/Parallax";
 import { site } from "@/content/site";
@@ -33,16 +32,6 @@ export function Hero() {
               <p className="mt-8 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
                 {site.hero.body}
               </p>
-            </FadeIn>
-            <FadeIn delay={0.28}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Button href={site.hero.cta.href} variant="primary">
-                  {site.hero.cta.label}
-                </Button>
-                <Button href="/contact" variant="ghost" className="text-navy-950">
-                  お問い合わせ
-                </Button>
-              </div>
             </FadeIn>
           </div>
 

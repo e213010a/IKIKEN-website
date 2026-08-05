@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
 import { type NewsItem } from "@/content/news";
@@ -5,9 +6,10 @@ import { type NewsItem } from "@/content/news";
 type NewsListProps = {
   items: readonly NewsItem[];
   tone?: "light" | "dark";
+  showImage?: boolean;
 };
 
-export function NewsList({ items, tone = "light" }: NewsListProps) {
+export function NewsList({ items, tone = "light", showImage = false }: NewsListProps) {
   const isDark = tone === "dark";
 
   return (
@@ -21,27 +23,54 @@ export function NewsList({ items, tone = "light" }: NewsListProps) {
     >
       {items.map((item) => {
         const row = (
-          <div className="flex flex-col gap-2 py-6 sm:flex-row sm:items-baseline sm:gap-6">
-            <time
-              dateTime={item.date}
-              className={
-                "shrink-0 font-sans text-sm tabular-nums " +
-                (isDark ? "text-white/50" : "text-ink-muted")
-              }
-            >
-              {item.date}
-            </time>
-            <span
-              className={
-                "shrink-0 text-xs font-semibold uppercase tracking-[0.15em] " +
-                (isDark ? "text-teal-300" : "text-teal-600")
-              }
-            >
-              {item.category}
-            </span>
-            <p className={isDark ? "text-sm text-white/90 sm:text-base" : "text-sm text-navy-950 sm:text-base"}>
-              {item.title}
-            </p>
+          <div className="flex items-center gap-5 py-6">
+            {showImage && (
+              <div
+                className={
+                  "relative h-14 w-20 shrink-0 overflow-hidden rounded-lg " +
+                  (isDark ? "bg-white/5" : "bg-paper-dim")
+                }
+              >
+                {item.image ? (
+                  <Image src={item.image} alt="" fill className="object-cover" sizes="80px" />
+                ) : (
+                  <div
+                    className={
+                      "flex h-full items-center justify-center text-[0.65rem] " +
+                      (isDark ? "text-white/30" : "text-ink-muted/50")
+                    }
+                  >
+                    Photo
+                  </div>
+                )}
+              </div>
+            )}
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6">
+              <time
+                dateTime={item.date}
+                className={
+                  "shrink-0 font-sans text-sm tabular-nums " +
+                  (isDark ? "text-white/50" : "text-ink-muted")
+                }
+              >
+                {item.date}
+              </time>
+              <span
+                className={
+                  "shrink-0 text-xs font-semibold uppercase tracking-[0.15em] " +
+                  (isDark ? "text-teal-300" : "text-teal-600")
+                }
+              >
+                {item.category}
+              </span>
+              <p
+                className={
+                  isDark ? "text-sm text-white/90 sm:text-base" : "text-sm text-navy-950 sm:text-base"
+                }
+              >
+                {item.title}
+              </p>
+            </div>
           </div>
         );
 

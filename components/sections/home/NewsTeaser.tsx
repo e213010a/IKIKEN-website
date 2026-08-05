@@ -20,7 +20,7 @@ export function NewsTeaser() {
           </Link>
         </div>
         <div className="flex-1">
-          <NewsList items={latest} tone="dark" />
+          <NewsList items={latest} tone="dark" showImage />
         </div>
       </Container>
     </section>

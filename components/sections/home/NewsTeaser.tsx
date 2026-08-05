@@ -12,7 +12,7 @@ export function NewsTeaser() {
     <section className="border-y border-navy-950/8 bg-white py-10 sm:py-12">
       <Container className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-10">
         <div className="flex shrink-0 items-center justify-between sm:w-40 sm:flex-col sm:items-start sm:gap-3">
-          <span className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-teal-600">
+          <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             News
           </span>
           <Link

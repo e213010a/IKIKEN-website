@@ -9,7 +9,7 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, body }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-paper pb-20 pt-40 sm:pb-28 sm:pt-48">
+    <section className="relative overflow-hidden bg-paper pb-24 pt-40 sm:pb-32 sm:pt-48">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,143,77,0.16),transparent_55%)]"
         aria-hidden
@@ -20,14 +20,14 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
       />
       <Container className="relative">
         <FadeIn>
-          <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-600">
+          <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.15] text-navy-950 sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.2] tracking-[0.15em] text-navy-950 sm:text-4xl lg:text-5xl">
             {title}
           </h1>
           {body && (
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
+            <p className="mt-7 max-w-xl text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
               {body}
             </p>
           )}

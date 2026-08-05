@@ -9,20 +9,20 @@ type MissionProps = {
 
 export function Mission({ eyebrow, title, body }: MissionProps) {
   return (
-    <section className="relative overflow-hidden bg-paper-dim py-28 sm:py-36">
+    <section className="relative overflow-hidden bg-paper-dim py-32 sm:py-40">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(32,199,181,0.14),transparent_55%)]"
         aria-hidden
       />
       <Container className="relative max-w-3xl">
         <FadeIn>
-          <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-600">
+          <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h2 className="text-balance text-3xl font-medium leading-[1.35] text-navy-950 sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="text-balance text-2xl font-medium leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
             {title}
           </h2>
-          <p className="mt-8 text-base leading-loose text-ink-muted sm:text-lg">{body}</p>
+          <p className="mt-8 text-sm leading-loose tracking-[0.15em] text-ink-muted sm:text-base">{body}</p>
         </FadeIn>
       </Container>
     </section>

@@ -30,7 +30,7 @@ export function SectionHeading({
       {eyebrow && (
         <p
           className={clsx(
-            "mb-4 font-sans text-xs font-semibold uppercase tracking-[0.25em]",
+            "mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em]",
             isLight ? "text-teal-300" : "text-teal-600",
           )}
         >
@@ -39,7 +39,7 @@ export function SectionHeading({
       )}
       <h2
         className={clsx(
-          "whitespace-pre-line text-balance text-3xl font-medium leading-[1.35] sm:text-4xl lg:text-[2.75rem]",
+          "whitespace-pre-line text-balance text-2xl font-medium leading-[1.4] tracking-[0.15em] sm:text-3xl lg:text-4xl",
           isLight ? "text-white" : "text-navy-950",
         )}
       >
@@ -48,7 +48,7 @@ export function SectionHeading({
       {body && (
         <p
           className={clsx(
-            "mt-6 text-base leading-relaxed sm:text-lg",
+            "mt-6 text-sm leading-relaxed tracking-[0.15em] sm:text-base",
             isLight ? "text-white/70" : "text-ink-muted",
           )}
         >

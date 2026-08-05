@@ -7,7 +7,7 @@ import { team } from "@/content/team";
 
 export function TeamTeaser() {
   return (
-    <section className="bg-paper py-28 sm:py-36">
+    <section className="bg-paper py-32 sm:py-40">
       <Container className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
         <FadeIn>
           <SectionHeading

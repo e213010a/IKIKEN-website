@@ -6,7 +6,7 @@ import { type NewsItem } from "@/content/news";
 
 export function NewsGrid({ items }: { items: readonly NewsItem[] }) {
   return (
-    <section className="bg-paper py-24 sm:py-32">
+    <section className="bg-paper py-28 sm:py-36">
       <Container>
         <Reveal className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
           {items.map((item) => {

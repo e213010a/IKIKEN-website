@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 
 export function Problem() {
   return (
-    <section className="bg-paper py-28 sm:py-36">
+    <section className="bg-paper py-32 sm:py-40">
       <Container>
         <FadeIn>
           <SectionHeading

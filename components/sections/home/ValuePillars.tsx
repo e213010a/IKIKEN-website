@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 
 export function ValuePillars() {
   return (
-    <section className="bg-paper-dim py-28 sm:py-36">
+    <section className="bg-paper-dim py-32 sm:py-40">
       <Container>
         <FadeIn>
           <SectionHeading
@@ -21,11 +21,11 @@ export function ValuePillars() {
           {site.values.pillars.map((pillar) => (
             <RevealItem key={pillar.title}>
               <div className="h-full rounded-2xl bg-white p-10 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <span className="font-sans text-4xl font-semibold text-teal-600">
+                <span className="font-sans text-3xl font-semibold tracking-[0.15em] text-teal-600">
                   {pillar.title}
                 </span>
-                <p className="mt-1 text-sm font-medium text-ink-muted">{pillar.titleJa}</p>
-                <p className="mt-6 text-sm leading-relaxed text-ink-muted">{pillar.body}</p>
+                <p className="mt-1 text-sm font-medium tracking-[0.15em] text-ink-muted">{pillar.titleJa}</p>
+                <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">{pillar.body}</p>
               </div>
             </RevealItem>
           ))}

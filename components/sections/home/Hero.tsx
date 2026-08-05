@@ -20,17 +20,17 @@ export function Hero() {
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <FadeIn>
-              <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-600">
+              <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
                 {site.hero.eyebrow}
               </p>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="whitespace-pre-line font-sans text-[2.75rem] font-semibold leading-[1.08] text-navy-950 sm:text-6xl lg:text-7xl">
+              <h1 className="whitespace-pre-line font-sans text-4xl font-semibold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-5xl lg:text-6xl">
                 {site.hero.headline}
               </h1>
             </FadeIn>
             <FadeIn delay={0.18}>
-              <p className="mt-8 max-w-lg text-base leading-relaxed text-ink-muted sm:text-lg">
+              <p className="mt-8 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
                 {site.hero.body}
               </p>
             </FadeIn>

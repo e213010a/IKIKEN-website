@@ -43,7 +43,7 @@ export async function POST(request: Request) {
       `お名前: ${name}`,
       `ご所属: ${organization || "未入力"}`,
       `お問い合わせ種別: ${inquiryType}`,
-      `お立場: ${role}`,
+      `ご職業: ${role}`,
       `メールアドレス: ${email}`,
       "",
       "お問い合わせ内容:",

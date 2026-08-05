@@ -91,7 +91,7 @@ export function ContactForm() {
             ))}
           </select>
         </Field>
-        <Field label="ご所属・お立場" htmlFor="role">
+        <Field label="ご職業" htmlFor="role">
           <select id="role" name="role" required defaultValue="" className={inputClass}>
             <option value="" disabled>
               選択してください

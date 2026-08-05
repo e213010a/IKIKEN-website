@@ -5,16 +5,16 @@ import { Cta } from "@/components/sections/home/Cta";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Product",
-  description: site.productPage.hero.body,
+  title: "Our Business",
+  description: site.businessPage.hero.body,
 };
 
-export default function ProductPage() {
+export default function OurBusinessPage() {
   return (
     <>
-      <PageHero {...site.productPage.hero} />
-      <FeatureSection {...site.productPage.app} tone="light" />
-      <FeatureSection {...site.productPage.controller} tone="dim" reverse />
+      <PageHero {...site.businessPage.hero} />
+      <FeatureSection {...site.businessPage.app} tone="light" />
+      <FeatureSection {...site.businessPage.controller} tone="dim" reverse />
       <Cta />
     </>
   );

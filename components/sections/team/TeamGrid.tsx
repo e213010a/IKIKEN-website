@@ -1,11 +1,26 @@
 import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/motion/FadeIn";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
 import { type TeamMember } from "@/content/team";
 
-export function TeamGrid({ members }: { members: TeamMember[] }) {
+type TeamGridProps = {
+  members: TeamMember[];
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+};
+
+export function TeamGrid({ members, id, eyebrow, title, body }: TeamGridProps) {
   return (
-    <section className="bg-paper py-28 sm:py-36">
+    <section id={id} className="bg-paper py-28 sm:py-36">
       <Container>
+        {title && (
+          <FadeIn>
+            <SectionHeading eyebrow={eyebrow} title={title} body={body} className="mb-16" />
+          </FadeIn>
+        )}
         <Reveal className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
           {members.map((member) => (
             <RevealItem key={member.name + member.role}>

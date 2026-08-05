@@ -10,17 +10,17 @@ export const site = {
     tagline: "内視鏡トレーニングDX",
   },
   nav: [
-    { label: "Product", href: "/product" },
-    { label: "About", href: "/about" },
     { label: "News", href: "/news" },
-    { label: "Team", href: "/team" },
+    { label: "Our Business", href: "/our-business" },
+    { label: "About", href: "/about" },
+    { label: "Recruit", href: "/recruit" },
     { label: "Contact", href: "/contact" },
   ],
   hero: {
     eyebrow: "MyEndoscope — 内視鏡トレーニングDX",
     headline: "Master Endoscopy,\nAnytime, Anywhere.",
     body: "専用コントローラーとVRシミュレーションアプリで、内視鏡の実践練習をバーチャルに、一人で行えるシミュレーター「MyEndoscope」。環境の制約から、内視鏡技術の習得を解き放ちます。",
-    cta: { label: "製品を見る", href: "/product" },
+    cta: { label: "事業内容を見る", href: "/our-business" },
   },
   problem: {
     eyebrow: "Problem",
@@ -101,11 +101,11 @@ export const site = {
     eyebrow: "Team",
     title: "医療とテクノロジーの現場を知るチーム。",
     body: "臨床現場の課題を熟知したメンバーが、テクノロジーの力でトレーニング環境を再設計しています。",
-    cta: { label: "チームを見る", href: "/team" },
+    cta: { label: "チームを見る", href: "/about#team" },
   },
-  productPage: {
+  businessPage: {
     hero: {
-      eyebrow: "Product",
+      eyebrow: "Our Business",
       title: "MyEndoscopeで、実践に近いトレーニングを。",
       body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC画面で操作でき、ヘッドセットは不要。実機に近い操作感と、繰り返し練習できる環境を両立しました。",
     },
@@ -174,12 +174,47 @@ export const site = {
         { label: "代表者", value: "準備中" },
       ],
     },
-  },
-  teamPage: {
-    hero: {
+    team: {
       eyebrow: "Team",
       title: "チーム紹介",
       body: "医療とテクノロジー、両方の現場を知るメンバーが、トレーニング環境の再設計に取り組んでいます。",
+    },
+    history: {
+      eyebrow: "History",
+      title: "沿革",
+      milestones: [
+        { date: "2026-08", title: "コーポレートサイトを公開" },
+      ],
+    },
+  },
+  recruitPage: {
+    hero: {
+      eyebrow: "Recruit",
+      title: "医療の未来を、一緒につくる仲間へ。",
+      body: "MyEndoscopeは、医療とテクノロジーの両方に本気で向き合うチームです。内視鏡トレーニングのあり方を変える挑戦に、力を貸してください。",
+    },
+    culture: {
+      eyebrow: "Culture",
+      title: "私たちが大切にしていること",
+      points: [
+        {
+          title: "現場から学ぶ",
+          body: "臨床現場の課題を起点に、本当に必要なプロダクトを考えます。",
+        },
+        {
+          title: "速く、正しく検証する",
+          body: "仮説を素早く形にし、医療従事者からのフィードバックで磨き上げます。",
+        },
+        {
+          title: "医療の未来に本気で向き合う",
+          body: "トレーニングギャップの解消という大きな課題に、長期的な視点で取り組みます。",
+        },
+      ],
+    },
+    positions: {
+      eyebrow: "Positions",
+      title: "募集職種",
+      body: "現在の募集職種については、下記フォームよりお問い合わせください。",
     },
   },
   contactPage: {

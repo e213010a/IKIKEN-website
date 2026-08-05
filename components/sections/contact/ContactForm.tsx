@@ -148,7 +148,7 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={htmlFor} className="text-sm font-medium text-navy-950">
+      <label htmlFor={htmlFor} className="font-heading text-sm font-medium text-navy-950">
         {label}
       </label>
       {children}

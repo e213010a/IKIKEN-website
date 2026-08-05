@@ -111,7 +111,7 @@ export const site = {
   },
   businessTeaser: {
     eyebrow: "Our Business",
-    title: "MyEndoscopeが、内視鏡室をどこにでも持ち運ぶ。",
+    title: "MyEndoscopeで、内視鏡室をどこにでも持ち運ぶ。",
     body: "専用コントローラーと、PC・スマートフォン画面で動くVRシミュレーションアプリ。実機さながらの操作感を一人で体験できます。",
     cta: { label: "View More", href: "/our-business" },
   },
@@ -168,15 +168,15 @@ export const site = {
     },
     mission: {
       eyebrow: "Mission",
-      title: "医療の知識と技術を、次の世代へ継承する。",
-      body: "専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーター「MyEndoscope」を開発しています。世界中の内視鏡医や医療従事者が、いつでも、どこでも内視鏡の練習ができることを志し、医師のスキル向上、患者の安全性の向上、そしてグローバルな医療システムにおけるトレーニングギャップの解消を目指します。",
+      title: "Master Endoscopy, Anytime, Anywhere。",
+      body: "VRシミュレーションアプリと専用コントローラーで構成される内視鏡トレーニングシミュレーター「MyEndoscope」を開発しています。内視鏡の技術を磨く医師に、いつでも・どこでも内視鏡の練習を提供し、医師のスキル向上、患者の安全性の向上、そしてグローバルな医療システムにおけるトレーニングギャップの解消を目指します。",
     },
     overview: {
       eyebrow: "Company",
       title: "会社概要",
       rows: [
         { label: "商号", value: "株式会社医療継承研究所（IKEIKEN.Lab）" },
-        { label: "製品", value: "MyEndoscope（内視鏡トレーニングDX）" },
+        { label: "製品", value: "MyEndoscope（内視鏡トレーニングのDX）" },
         {
           label: "事業内容",
           value: "医療従事者向け内視鏡トレーニングシステムの開発・提供",
@@ -194,7 +194,7 @@ export const site = {
     advisors: {
       eyebrow: "Advisors",
       title: "医療の最前線が、支えるチーム。",
-      body: "内視鏡分野の超熟練医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
+      body: "世界的内視鏡医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
     },
     history: {
       eyebrow: "History",
@@ -205,8 +205,8 @@ export const site = {
   recruitPage: {
     hero: {
       eyebrow: "Recruit",
-      title: "医療の未来を、一緒につくる仲間へ。",
-      body: "MyEndoscopeは、医療とテクノロジーの両方に本気で向き合うチームです。内視鏡トレーニングのあり方を変える挑戦に、力を貸してください。",
+      title: "医療DXの未来を、一緒につくる仲間へ。",
+      body: "医療継承研究所は、医療とテクノロジーの両方に本気で向き合うチームです。内視鏡トレーニングのあり方を変える挑戦に、力を貸してください。",
     },
     culture: {
       eyebrow: "Culture",
@@ -229,7 +229,7 @@ export const site = {
     positions: {
       eyebrow: "Positions",
       title: "募集職種",
-      body: "現在の募集職種については、下記フォームよりお問い合わせください。",
+      body: "下記フォームよりお気軽にご応募ください。",
     },
   },
   contactPage: {
@@ -243,12 +243,12 @@ export const site = {
     hero: {
       eyebrow: "News",
       title: "お知らせ",
-      body: "IKEIKEN.Labからのお知らせ・プレスリリースを掲載します。",
+      body: "医療継承研究所からのお知らせ・プレスリリースを掲載します。",
     },
   },
   cta: {
-    title: "内視鏡トレーニングの、次の一歩を。",
-    body: "プロダクトについてのご質問、導入に関するご相談など、どんなことでもお気軽にお問い合わせください。担当者より折り返しご連絡いたします。",
+    title: "内視鏡トレーニングの、\n次の一歩を。",
+    body: "プロダクトについてのご質問、導入に関するご相談など、どんなことでもお気軽にお問い合わせください。\n担当者より折り返しご連絡いたします。",
     button: { label: "お問い合わせ", href: "/contact" },
   },
   footer: {

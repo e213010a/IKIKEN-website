@@ -29,7 +29,7 @@ export function Header() {
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
         <Link href="/" onClick={() => setOpen(false)} aria-label={`${site.company.brand} ホーム`}>
-          <Logo variant="dark" scale={1.5} />
+          <Logo variant="dark" scale={1.5} animated />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

@@ -2,6 +2,7 @@ export const site = {
   company: {
     legalName: "株式会社医療継承研究所",
     brand: "医療継承研究所",
+    brandEn: "IKEIKEN.Lab",
     tagline: "Master Endoscopy, Anytime, Anywhere.",
     taglineJa: "内視鏡を学ぶ環境に、制約はいらない。",
   },

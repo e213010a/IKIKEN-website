@@ -1,15 +1,18 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { site } from "@/content/site";
+import { BrandNameFlip } from "@/components/ui/BrandNameFlip";
 
 type LogoProps = {
   variant?: "dark" | "light";
   className?: string;
   /** 基準サイズ(1.05rem)に対する倍率 */
   scale?: number;
+  /** 社名とIKEIKEN.Labを5秒ごとにフリップ表示する */
+  animated?: boolean;
 };
 
-export function Logo({ variant = "dark", className, scale = 1 }: LogoProps) {
+export function Logo({ variant = "dark", className, scale = 1, animated = false }: LogoProps) {
   const isLight = variant === "light";
   return (
     <span
@@ -28,9 +31,13 @@ export function Logo({ variant = "dark", className, scale = 1 }: LogoProps) {
         priority
         className="h-[1.3em] w-auto"
       />
-      <span className="whitespace-nowrap font-serif text-[0.95em] tracking-[0.08em]">
-        {site.company.brand}
-      </span>
+      {animated ? (
+        <BrandNameFlip />
+      ) : (
+        <span className="whitespace-nowrap font-serif text-[0.95em] tracking-[0.08em]">
+          {site.company.brand}
+        </span>
+      )}
     </span>
   );
 }

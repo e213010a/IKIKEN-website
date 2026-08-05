@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: message }, { status: 400 });
   }
 
-  const { name, organization, role, email, message } = parsed.data;
+  const { name, organization, inquiryType, role, email, message } = parsed.data;
   const to = site.footer.contactEmail;
 
   const resend = getResendClient();
@@ -26,6 +26,7 @@ export async function POST(request: Request) {
     console.info("[contact] RESEND_API_KEY is not set. Submission:", {
       name,
       organization,
+      inquiryType,
       role,
       email,
       message,
@@ -37,10 +38,11 @@ export async function POST(request: Request) {
     from: `${site.company.brand} <onboarding@resend.dev>`,
     to,
     replyTo: email,
-    subject: `【お問い合わせ】${name}様（${role}）より`,
+    subject: `【お問い合わせ】${name}様（${inquiryType}）より`,
     text: [
       `お名前: ${name}`,
       `ご所属: ${organization || "未入力"}`,
+      `お問い合わせ種別: ${inquiryType}`,
       `お立場: ${role}`,
       `メールアドレス: ${email}`,
       "",

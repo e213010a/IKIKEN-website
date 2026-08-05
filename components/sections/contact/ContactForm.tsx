@@ -3,7 +3,7 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
-import { contactRoles } from "@/lib/validation";
+import { contactInquiryTypes, contactRoles } from "@/lib/validation";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -66,18 +66,6 @@ export function ContactForm() {
             className={inputClass}
           />
         </Field>
-        <Field label="ご所属（任意）" htmlFor="organization">
-          <input
-            id="organization"
-            name="organization"
-            type="text"
-            autoComplete="organization"
-            className={inputClass}
-          />
-        </Field>
-      </div>
-
-      <div className="grid gap-6 sm:grid-cols-2">
         <Field label="メールアドレス" htmlFor="email">
           <input
             id="email"
@@ -87,6 +75,21 @@ export function ContactForm() {
             autoComplete="email"
             className={inputClass}
           />
+        </Field>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <Field label="お問い合わせ種別" htmlFor="inquiryType">
+          <select id="inquiryType" name="inquiryType" required defaultValue="" className={inputClass}>
+            <option value="" disabled>
+              選択してください
+            </option>
+            {contactInquiryTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
         </Field>
         <Field label="ご所属・お立場" htmlFor="role">
           <select id="role" name="role" required defaultValue="" className={inputClass}>
@@ -101,6 +104,16 @@ export function ContactForm() {
           </select>
         </Field>
       </div>
+
+      <Field label="ご所属（任意）" htmlFor="organization">
+        <input
+          id="organization"
+          name="organization"
+          type="text"
+          autoComplete="organization"
+          className={inputClass}
+        />
+      </Field>
 
       <Field label="お問い合わせ内容" htmlFor="message">
         <textarea

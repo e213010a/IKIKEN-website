@@ -23,7 +23,7 @@ export function BrandNameFlip() {
         className="grid transition-transform duration-700 ease-in-out [transform-style:preserve-3d]"
         style={{ transform: `rotateX(${count * 180}deg)` }}
       >
-        <span className="col-start-1 row-start-1 whitespace-nowrap font-serif tracking-[0.08em] [backface-visibility:hidden]">
+        <span className="col-start-1 row-start-1 whitespace-nowrap font-serif font-bold tracking-[0.08em] [backface-visibility:hidden]">
           {site.company.brand}
         </span>
         <span className="col-start-1 row-start-1 whitespace-nowrap font-heading font-bold tracking-[0.08em] [backface-visibility:hidden] [transform:rotateX(180deg)]">

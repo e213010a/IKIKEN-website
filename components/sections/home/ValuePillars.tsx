@@ -21,7 +21,7 @@ export function ValuePillars() {
           {site.values.pillars.map((pillar) => (
             <RevealItem key={pillar.title}>
               <div className="h-full rounded-2xl bg-white p-10 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <span className="font-sans text-4xl font-semibold tracking-tight text-teal-600">
+                <span className="font-sans text-4xl font-semibold text-teal-600">
                   {pillar.title}
                 </span>
                 <p className="mt-1 text-sm font-medium text-ink-muted">{pillar.titleJa}</p>

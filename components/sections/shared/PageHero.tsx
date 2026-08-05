@@ -19,7 +19,7 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
           <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-300">
             {eyebrow}
           </p>
-          <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.15] text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           {body && (

@@ -26,7 +26,7 @@ export function Solution() {
             <RevealItem key={feature.title}>
               <div className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-9 transition-colors duration-300 hover:border-teal-400/30 hover:bg-white/[0.05]">
                 <span className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-teal-300">
-                  {i === 0 ? "App" : "Hardware"}
+                  {i === 0 ? "Courseware" : "AI"}
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-white">{feature.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65">{feature.body}</p>

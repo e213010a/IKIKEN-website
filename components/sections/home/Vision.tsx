@@ -16,7 +16,7 @@ export function Vision() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="mx-auto max-w-3xl text-balance text-2xl font-medium leading-[1.7] tracking-tight text-white sm:text-3xl lg:text-[2.25rem]">
+          <p className="mx-auto max-w-3xl text-balance text-2xl font-medium leading-[1.7] text-white sm:text-3xl lg:text-[2.25rem]">
             {site.vision.quote}
           </p>
         </FadeIn>

@@ -13,7 +13,7 @@ export function HowItWorks() {
               <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.25em] text-teal-600">
                 {site.howItWorks.eyebrow}
               </p>
-              <h2 className="text-balance text-3xl font-medium leading-[1.35] tracking-tight text-navy-950 sm:text-4xl">
+              <h2 className="text-balance text-3xl font-medium leading-[1.35] text-navy-950 sm:text-4xl">
                 {site.howItWorks.title}
               </h2>
             </FadeIn>

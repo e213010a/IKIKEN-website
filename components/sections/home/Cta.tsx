@@ -8,7 +8,7 @@ export function Cta() {
     <section className="bg-navy-950 pb-28 pt-24 sm:pb-36 sm:pt-32">
       <Container className="text-center">
         <FadeIn>
-          <h2 className="mx-auto max-w-2xl text-balance text-3xl font-medium leading-[1.3] tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-balance text-3xl font-medium leading-[1.3] text-white sm:text-4xl lg:text-5xl">
             {site.cta.title}
           </h2>
         </FadeIn>

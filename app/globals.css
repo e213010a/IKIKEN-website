@@ -19,9 +19,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-jp: var(--font-noto-sans-jp);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), -apple-system, BlinkMacSystemFont, Roboto, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Meiryo", sans-serif;
 
   --color-navy-950: var(--color-navy-950);
   --color-navy-900: var(--color-navy-900);
@@ -51,7 +50,8 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-jp), var(--font-sans), sans-serif;
+  font-family: var(--font-sans);
+  letter-spacing: 1.5px;
 }
 
 @media (prefers-reduced-motion: reduce) {

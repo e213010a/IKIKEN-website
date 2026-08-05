@@ -30,7 +30,7 @@ export function FeatureSection({
             <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.25em] text-teal-600">
               {eyebrow}
             </p>
-            <h2 className="text-balance text-3xl font-medium leading-[1.3] tracking-tight text-navy-950 sm:text-4xl">
+            <h2 className="text-balance text-3xl font-medium leading-[1.3] text-navy-950 sm:text-4xl">
               {title}
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-ink-muted">{body}</p>

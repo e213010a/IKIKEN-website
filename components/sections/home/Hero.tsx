@@ -7,7 +7,7 @@ import { site } from "@/content/site";
 export function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950 pt-28 pb-20">
-      {/* 抽象VR空間ビジュアル: 実写差し替え前提のプレースホルダー */}
+      {/* 抽象シミュレーター空間ビジュアル: 実写差し替え前提のプレースホルダー */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute left-1/2 top-1/2 h-[140vw] w-[140vw] -translate-x-1/2 -translate-y-1/2 sm:h-[900px] sm:w-[900px]">
           <div className="absolute inset-0 rounded-full border border-teal-400/10" />
@@ -28,7 +28,7 @@ export function Hero() {
               </p>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="whitespace-pre-line font-sans text-[2.75rem] font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
+              <h1 className="whitespace-pre-line font-sans text-[2.75rem] font-semibold leading-[1.08] text-white sm:text-6xl lg:text-7xl">
                 {site.hero.headline}
               </h1>
             </FadeIn>
@@ -55,7 +55,7 @@ export function Hero() {
                 <div className="absolute inset-6 rounded-[1.5rem] border border-teal-400/20" />
                 <div className="absolute inset-x-10 top-10 h-px bg-gradient-to-r from-transparent via-teal-400/40 to-transparent" />
                 <div className="absolute inset-x-10 bottom-10 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-white/40">
-                  <span>VR Simulation</span>
+                  <span>{site.product.name}</span>
                   <span>Controller</span>
                 </div>
                 <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-400/20 blur-2xl" />

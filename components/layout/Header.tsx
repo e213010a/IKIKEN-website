@@ -23,13 +23,13 @@ export function Header() {
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled || open
-          ? "border-b border-white/10 bg-navy-950/85 backdrop-blur-md"
+          ? "border-b border-navy-950/8 bg-paper/90 backdrop-blur-md"
           : "bg-transparent",
       )}
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
         <Link href="/" onClick={() => setOpen(false)} aria-label={`${site.company.brand} ホーム`}>
-          <Logo variant="light" scale={1.5} />
+          <Logo variant="dark" scale={1.5} />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -37,7 +37,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium tracking-wide text-white/80 transition-colors hover:text-white"
+              className="text-sm font-medium tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
             >
               {item.label}
             </Link>
@@ -55,7 +55,7 @@ export function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "メニューを閉じる" : "メニューを開く"}
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-navy-950 md:hidden"
         >
           <span className="relative block h-4 w-5">
             <span
@@ -81,13 +81,13 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-white/10 px-6 pb-6 pt-2 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-navy-950/8 bg-paper px-6 pb-6 pt-2 md:hidden">
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="py-3 text-base font-medium text-white/90"
+              className="py-3 text-base font-medium text-navy-950/90"
             >
               {item.label}
             </Link>

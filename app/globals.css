@@ -12,8 +12,13 @@
   --color-teal-500: #20c7b5;
   --color-teal-600: #159e8f;
 
-  --color-paper: #f7f6f2;
-  --color-paper-dim: #efede4;
+  --color-coral-300: #ffc9a8;
+  --color-coral-400: #ffa869;
+  --color-coral-500: #ff8f4d;
+  --color-coral-600: #e8722f;
+
+  --color-paper: #fdf9f2;
+  --color-paper-dim: #f6efe2;
   --color-ink: #101019;
   --color-ink-muted: #5c5c6e;
 }
@@ -32,6 +37,11 @@
   --color-teal-400: var(--color-teal-400);
   --color-teal-500: var(--color-teal-500);
   --color-teal-600: var(--color-teal-600);
+
+  --color-coral-300: var(--color-coral-300);
+  --color-coral-400: var(--color-coral-400);
+  --color-coral-500: var(--color-coral-500);
+  --color-coral-600: var(--color-coral-600);
 
   --color-paper: var(--color-paper);
   --color-paper-dim: var(--color-paper-dim);

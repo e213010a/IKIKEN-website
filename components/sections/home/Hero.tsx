@@ -6,34 +6,31 @@ import { site } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950 pt-28 pb-20">
-      {/* 抽象シミュレーター空間ビジュアル: 実写差し替え前提のプレースホルダー */}
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-paper pt-28 pb-20">
+      {/* ポップな装飾ビジュアル: 実写差し替え前提のプレースホルダー */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute left-1/2 top-1/2 h-[140vw] w-[140vw] -translate-x-1/2 -translate-y-1/2 sm:h-[900px] sm:w-[900px]">
-          <div className="absolute inset-0 rounded-full border border-teal-400/10" />
-          <div className="absolute inset-[12%] rounded-full border border-teal-400/10" />
-          <div className="absolute inset-[24%] rounded-full border border-teal-400/15" />
-          <div className="absolute inset-[36%] rounded-full bg-teal-400/10 blur-2xl" />
-        </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(32,199,181,0.16),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(8,8,31,0.6)_75%,rgba(8,8,31,1)_100%)]" />
+        <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rotate-6 rounded-[45%_55%_60%_40%/50%_45%_55%_50%] bg-gradient-to-br from-teal-300/50 to-coral-300/40 blur-[2px] sm:-right-20 sm:-top-24" />
+        <div className="absolute left-[8%] top-[22%] h-3 w-3 rotate-45 rounded-sm bg-coral-400/70" />
+        <div className="absolute left-[18%] top-[65%] h-2 w-2 rounded-full bg-teal-500/60" />
+        <div className="absolute right-[30%] top-[15%] h-2.5 w-2.5 rotate-45 rounded-sm bg-teal-400/60" />
+        <div className="absolute bottom-[18%] right-[12%] h-4 w-4 rotate-12 rounded-sm bg-coral-300/60" />
       </div>
 
       <Container className="relative">
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <FadeIn>
-              <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-300">
+              <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-teal-600">
                 {site.hero.eyebrow}
               </p>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="whitespace-pre-line font-sans text-[2.75rem] font-semibold leading-[1.08] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="whitespace-pre-line font-sans text-[2.75rem] font-semibold leading-[1.08] text-navy-950 sm:text-6xl lg:text-7xl">
                 {site.hero.headline}
               </h1>
             </FadeIn>
             <FadeIn delay={0.18}>
-              <p className="mt-8 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+              <p className="mt-8 max-w-lg text-base leading-relaxed text-ink-muted sm:text-lg">
                 {site.hero.body}
               </p>
             </FadeIn>
@@ -42,7 +39,7 @@ export function Hero() {
                 <Button href={site.hero.cta.href} variant="primary">
                   {site.hero.cta.label}
                 </Button>
-                <Button href="/contact" variant="ghost" className="text-white">
+                <Button href="/contact" variant="ghost" className="text-navy-950">
                   お問い合わせ
                 </Button>
               </div>
@@ -51,14 +48,14 @@ export function Hero() {
 
           <FadeIn delay={0.2} className="hidden lg:block">
             <Parallax offset={40}>
-              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm">
-                <div className="absolute inset-6 rounded-[1.5rem] border border-teal-400/20" />
-                <div className="absolute inset-x-10 top-10 h-px bg-gradient-to-r from-transparent via-teal-400/40 to-transparent" />
-                <div className="absolute inset-x-10 bottom-10 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-white/40">
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm rounded-[2rem] border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
+                <div className="absolute inset-6 rounded-[1.5rem] border border-teal-500/20" />
+                <div className="absolute inset-x-10 top-10 h-px bg-gradient-to-r from-transparent via-teal-500/40 to-transparent" />
+                <div className="absolute inset-x-10 bottom-10 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-ink-muted/70">
                   <span>{site.product.name}</span>
                   <span>Controller</span>
                 </div>
-                <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-400/20 blur-2xl" />
+                <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-teal-300/40 to-coral-300/40 blur-2xl" />
               </div>
             </Parallax>
           </FadeIn>
@@ -66,8 +63,8 @@ export function Hero() {
       </Container>
 
       <div className="absolute inset-x-0 bottom-8 flex justify-center">
-        <div className="flex h-9 w-6 items-start justify-center rounded-full border border-white/25 p-1.5">
-          <span className="h-1.5 w-px animate-bounce bg-white/60" />
+        <div className="flex h-9 w-6 items-start justify-center rounded-full border border-navy-950/20 p-1.5">
+          <span className="h-1.5 w-px animate-bounce bg-navy-950/50" />
         </div>
       </div>
     </section>

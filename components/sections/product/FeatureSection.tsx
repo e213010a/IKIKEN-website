@@ -25,7 +25,7 @@ export function FeatureSection({
   return (
     <section className={clsx("py-28 sm:py-36", tone === "dim" ? "bg-paper-dim" : "bg-paper")}>
       <Container>
-        <div className="grid items-start gap-14 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <FadeIn className={clsx(reverse && "lg:order-2")}>
             <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
               {eyebrow}

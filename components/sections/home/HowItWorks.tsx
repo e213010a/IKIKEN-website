@@ -7,7 +7,7 @@ export function HowItWorks() {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <StickyPin>
             <FadeIn>
               <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">

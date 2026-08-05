@@ -27,7 +27,7 @@ export function HowItWorks() {
                     {step.step}
                   </span>
                   <div>
-                    <h3 className="text-lg font-semibold tracking-[0.15em] text-navy-950">{step.title}</h3>
+                    <h3 className="text-lg font-medium tracking-[0.15em] text-navy-950">{step.title}</h3>
                     <p className="mt-3 max-w-md text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
                       {step.body}
                     </p>

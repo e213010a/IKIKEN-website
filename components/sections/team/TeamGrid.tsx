@@ -14,7 +14,7 @@ export function TeamGrid({ members }: { members: TeamMember[] }) {
                   Photo
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-navy-950">{member.name}</h3>
+                  <h3 className="text-lg font-medium text-navy-950">{member.name}</h3>
                   <p className="mt-1 text-sm font-medium text-teal-600">{member.role}</p>
                   <p className="mt-3 text-sm leading-relaxed text-ink-muted">{member.bio}</p>
                 </div>

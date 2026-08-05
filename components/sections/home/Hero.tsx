@@ -25,7 +25,7 @@ export function Hero() {
               </p>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="whitespace-pre-line font-sans text-4xl font-semibold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-5xl lg:text-6xl">
+              <h1 className="whitespace-pre-line font-sans text-4xl font-medium leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-5xl lg:text-6xl">
                 {site.hero.headline}
               </h1>
             </FadeIn>

@@ -40,7 +40,7 @@ export function FeatureSection({
             {features.map((feature) => (
               <RevealItem key={feature.title}>
                 <div className="rounded-2xl border border-navy-950/8 bg-white p-7">
-                  <h3 className="text-base font-semibold tracking-[0.15em] text-navy-950">{feature.title}</h3>
+                  <h3 className="text-base font-medium tracking-[0.15em] text-navy-950">{feature.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">{feature.body}</p>
                 </div>
               </RevealItem>

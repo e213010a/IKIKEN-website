@@ -252,6 +252,6 @@ export const site = {
     button: { label: "お問い合わせ", href: "/contact" },
   },
   footer: {
-    contactEmail: "ikuuyoti@gmail.com",
+    contactEmail: "myendoscope.office@gmail.com",
   },
 } as const;

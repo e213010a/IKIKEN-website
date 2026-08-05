@@ -20,7 +20,7 @@ export function Problem() {
           {site.problem.points.map((point) => (
             <RevealItem key={point.title}>
               <div className="h-full rounded-2xl border border-navy-950/8 bg-white p-8 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <h3 className="text-lg font-medium text-navy-950">{point.title}</h3>
+                <h3 className="text-lg font-medium break-keep text-navy-950">{point.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">{point.body}</p>
               </div>
             </RevealItem>

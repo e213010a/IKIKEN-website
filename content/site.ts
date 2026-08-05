@@ -18,7 +18,7 @@ export const site = {
   ],
   hero: {
     eyebrow: "MyEndoscope — 内視鏡トレーニングDX",
-    headline: "Master Endoscopy,\nAnytime, Anywhere.",
+    headline: "Master Endoscopy, Anytime, Anywhere.",
     body: "専用コントローラーとVRシミュレーションアプリで、内視鏡の実践練習をバーチャルに、一人で行えるシミュレーター「MyEndoscope」。環境の制約から、内視鏡技術の習得を解き放ちます。",
     cta: { label: "事業内容を見る", href: "/our-business" },
   },

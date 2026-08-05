@@ -17,7 +17,7 @@ export function Overview({ eyebrow, title, rows }: OverviewProps) {
           <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h2 className="text-2xl font-medium tracking-[0.15em] text-navy-950 sm:text-3xl">{title}</h2>
+          <h2 className="text-2xl font-medium break-keep tracking-[0.15em] text-navy-950 sm:text-3xl">{title}</h2>
 
           <dl className="mt-12 divide-y divide-navy-950/10 border-t border-navy-950/10">
             {rows.map((row) => (

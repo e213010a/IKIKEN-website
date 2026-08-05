@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/shared/PageHero";
+import { Problem } from "@/components/sections/home/Problem";
+import { Solution } from "@/components/sections/home/Solution";
 import { FeatureSection } from "@/components/sections/product/FeatureSection";
 import { Cta } from "@/components/sections/home/Cta";
 import { site } from "@/content/site";
@@ -13,6 +15,8 @@ export default function OurBusinessPage() {
   return (
     <>
       <PageHero {...site.businessPage.hero} />
+      <Problem />
+      <Solution />
       <FeatureSection {...site.businessPage.app} tone="light" />
       <FeatureSection {...site.businessPage.controller} tone="dim" reverse />
       <Cta />

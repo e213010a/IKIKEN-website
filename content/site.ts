@@ -101,7 +101,18 @@ export const site = {
     eyebrow: "Team",
     title: "医療とテクノロジーの現場を知るチーム。",
     body: "臨床現場の課題を熟知したメンバーが、テクノロジーの力でトレーニング環境を再設計しています。",
-    cta: { label: "チームを見る", href: "/about#team" },
+    cta: { label: "View More", href: "/about#team" },
+  },
+  newsTeaser: {
+    eyebrow: "News",
+    title: "お知らせ",
+    cta: { label: "View More", href: "/news" },
+  },
+  businessTeaser: {
+    eyebrow: "Our Business",
+    title: "MyEndoscopeが、内視鏡室をどこにでも持ち運ぶ。",
+    body: "専用コントローラーと、PC・スマートフォン画面で動くVRシミュレーションアプリ。実機さながらの操作感を一人で体験できます。",
+    cta: { label: "View More", href: "/our-business" },
   },
   businessPage: {
     hero: {

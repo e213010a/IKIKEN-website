@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/shared/PageHero";
-import { Container } from "@/components/ui/Container";
-import { NewsList } from "@/components/sections/news/NewsList";
+import { NewsGrid } from "@/components/sections/news/NewsGrid";
 import { Cta } from "@/components/sections/home/Cta";
 import { site } from "@/content/site";
 import { news } from "@/content/news";
@@ -17,11 +16,7 @@ export default function NewsPage() {
   return (
     <>
       <PageHero {...site.newsPage.hero} />
-      <section className="bg-paper py-24 sm:py-32">
-        <Container className="max-w-3xl">
-          <NewsList items={sorted} />
-        </Container>
-      </section>
+      <NewsGrid items={sorted} />
       <Cta />
     </>
   );

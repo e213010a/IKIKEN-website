@@ -5,6 +5,7 @@ export type NewsItem = {
   category: NewsCategory;
   title: string;
   href?: string; // 外部リンク（プレスリリース等）がある場合のみ
+  image?: string; // public/ からの画像パス。未指定の場合はプレースホルダーを表示
 };
 
 // 新しいお知らせは配列の先頭に追加してください（日付降順で表示されます）

@@ -20,6 +20,7 @@ export default function AboutPage() {
       <Mission {...site.aboutPage.mission} />
       <Overview {...site.aboutPage.overview} />
       <TeamGrid id="team" members={team} {...site.aboutPage.team} />
+      <Mission {...site.aboutPage.advisors} />
       <History {...site.aboutPage.history} />
       <Cta />
     </>

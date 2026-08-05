@@ -140,6 +140,33 @@ export const site = {
         },
       ],
     },
+    roadmap: {
+      eyebrow: "Roadmap",
+      title: "内視鏡の世界モデルを構築し、医療業界のNVIDIAになる。",
+      body: "MyEndoscopeは、単体のトレーニングツールにとどまりません。データを起点に、医療の未来を形づくるプラットフォームへ進化します。",
+      steps: [
+        {
+          step: "01",
+          title: "指導の統合",
+          body: "指導医は受講者の進捗を一元把握でき、指導そのものがシンプルになります。",
+        },
+        {
+          step: "02",
+          title: "データ蓄積とプラットフォーム化",
+          body: "ユーザーデータ・操作データを蓄積し、継続的なアップデートを重ねながらプラットフォームへと進化します。",
+        },
+        {
+          step: "03",
+          title: "暗黙知の形式知化",
+          body: "熟練医の暗黙知を形式知に変え、誰もが再現できる技術として継承します。",
+        },
+        {
+          step: "04",
+          title: "内視鏡の世界モデルへ",
+          body: "内視鏡の世界モデルを構築し、医師に必須の技能評価ツールとPhysical AIを提供する、医療業界のNVIDIAを目指します。",
+        },
+      ],
+    },
     controller: {
       eyebrow: "Dedicated Controller",
       title: "実機に近いトルク感を、デスクトップで。",
@@ -190,6 +217,11 @@ export const site = {
       eyebrow: "Team",
       title: "医療、技術、体験。専門性が結集するチーム。",
       body: "医療現場の課題を熟知したエキスパートと、先進テクノロジーの技術者が結集。トレーニング環境を根本から再設計しています。",
+    },
+    advisors: {
+      eyebrow: "Advisors",
+      title: "医療の最前線が、支えるチーム。",
+      body: "内視鏡分野の超熟練医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
     },
     history: {
       eyebrow: "History",

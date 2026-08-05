@@ -4,6 +4,7 @@ import { BusinessTeaser } from "@/components/sections/home/BusinessTeaser";
 import { Vision } from "@/components/sections/home/Vision";
 import { TeamTeaser } from "@/components/sections/home/TeamTeaser";
 import { Cta } from "@/components/sections/home/Cta";
+import { site } from "@/content/site";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Hero />
       <NewsTeaser />
       <BusinessTeaser />
-      <Vision />
+      <Vision eyebrow={site.vision.eyebrow} quote={site.vision.quote} />
       <TeamTeaser />
       <Cta />
     </>

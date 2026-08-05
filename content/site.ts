@@ -18,7 +18,7 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    eyebrow: "MyEndoscope — 内視鏡トレーニングDX",
+    eyebrow: "OUR MISSION - 内視鏡トレーニングDX",
     headline: "Master Endoscopy, Anytime, Anywhere.",
     body: "専用コントローラーとVRシミュレーションアプリで、内視鏡の実践練習をバーチャルに、一人で行えるシミュレーター「MyEndoscope」。環境の制約から、内視鏡技術の習得を解き放ちます。",
     cta: { label: "事業内容を見る", href: "/our-business" },
@@ -137,33 +137,6 @@ export const site = {
         {
           title: "指導医AIによる技能評価",
           body: "操作をAIがモニタリングして自動評価。指導医の立会を最小限に抑えながら、上達を可視化します。",
-        },
-      ],
-    },
-    roadmap: {
-      eyebrow: "Roadmap",
-      title: "内視鏡の世界モデルを構築し、医療業界のNVIDIAになる。",
-      body: "MyEndoscopeは、単体のトレーニングツールにとどまりません。データを起点に、医療の未来を形づくるプラットフォームへ進化します。",
-      steps: [
-        {
-          step: "01",
-          title: "指導の統合",
-          body: "指導医は受講者の進捗を一元把握でき、指導そのものがシンプルになります。",
-        },
-        {
-          step: "02",
-          title: "データ蓄積とプラットフォーム化",
-          body: "ユーザーデータ・操作データを蓄積し、継続的なアップデートを重ねながらプラットフォームへと進化します。",
-        },
-        {
-          step: "03",
-          title: "暗黙知の形式知化",
-          body: "熟練医の暗黙知を形式知に変え、誰もが再現できる技術として継承します。",
-        },
-        {
-          step: "04",
-          title: "内視鏡の世界モデルへ",
-          body: "内視鏡の世界モデルを構築し、医師に必須の技能評価ツールとPhysical AIを提供する、医療業界のNVIDIAを目指します。",
         },
       ],
     },

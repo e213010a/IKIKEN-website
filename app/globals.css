@@ -25,6 +25,7 @@
 
 @theme inline {
   --font-sans: "Gothic A1", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", serif;
 
   --color-navy-950: var(--color-navy-950);
   --color-navy-900: var(--color-navy-900);

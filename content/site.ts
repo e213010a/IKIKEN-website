@@ -2,8 +2,8 @@ export const site = {
   company: {
     legalName: "株式会社医療継承研究所",
     brand: "医療継承研究所",
-    tagline: "Learn endoscopy. Anywhere.",
-    taglineJa: "内視鏡を学ぶ場所に、制約はいらない。",
+    tagline: "Master Endoscopy, Anytime, Anywhere.",
+    taglineJa: "内視鏡を学ぶ環境に、制約はいらない。",
   },
   product: {
     name: "MyEndoscope",

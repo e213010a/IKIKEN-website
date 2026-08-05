@@ -8,6 +8,7 @@ export const site = {
   nav: [
     { label: "Product", href: "/product" },
     { label: "About", href: "/about" },
+    { label: "News", href: "/news" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
   ],
@@ -182,6 +183,13 @@ export const site = {
       eyebrow: "Contact",
       title: "お問い合わせ",
       body: "導入のご相談、デモのご依頼、取材・提携・投資に関するお問い合わせなど、お気軽にご連絡ください。担当者より折り返しご連絡いたします。",
+    },
+  },
+  newsPage: {
+    hero: {
+      eyebrow: "News",
+      title: "お知らせ",
+      body: "IKEIKEN.Labからのお知らせ・プレスリリースを掲載します。",
     },
   },
   cta: {

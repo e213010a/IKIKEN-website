@@ -11,9 +11,6 @@ export function Footer() {
         <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-start">
           <div className="max-w-sm">
             <Logo variant="light" />
-            <p className="mt-5 text-sm leading-relaxed text-white/60">
-              {site.hero.body}
-            </p>
           </div>
 
           <div className="flex flex-wrap gap-x-16 gap-y-8">

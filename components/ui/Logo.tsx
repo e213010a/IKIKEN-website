@@ -1,7 +1,7 @@
-import Image from "next/image";
 import clsx from "clsx";
 import { site } from "@/content/site";
 import { BrandNameFlip } from "@/components/ui/BrandNameFlip";
+import { LogoMark } from "@/components/ui/LogoMark";
 
 type LogoProps = {
   variant?: "dark" | "light";
@@ -23,14 +23,7 @@ export function Logo({ variant = "dark", className, scale = 1, animated = false 
         className,
       )}
     >
-      <Image
-        src={isLight ? "/brand/mark-white.png" : "/brand/mark.png"}
-        alt=""
-        width={22}
-        height={24}
-        priority
-        className="h-[1.3em] w-auto"
-      />
+      <LogoMark variant={variant} className="h-[1.3em] w-auto" />
       {animated ? (
         <BrandNameFlip />
       ) : (

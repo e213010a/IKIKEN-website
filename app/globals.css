@@ -24,8 +24,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-outfit), var(--font-gothic-a1), -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  --font-sans: "Gothic A1", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --color-navy-950: var(--color-navy-950);
   --color-navy-900: var(--color-navy-900);

@@ -25,7 +25,7 @@ export const site = {
   },
   problem: {
     eyebrow: "Problem",
-    title: "内視鏡医の育成環境が、圧倒的に不足している。",
+    title: "内視鏡医の育成環境が圧倒的に不足している。",
     body: "内視鏡による診断・手術を一貫して担える熟練医の育成環境は、今なお十分に整っているとは言えません。",
     points: [
       {
@@ -155,7 +155,7 @@ export const site = {
         },
         {
           title: "シンプルな接続",
-          body: "PCに接続するだけで、すぐにトレーニングを開始できます。",
+          body: "PC・スマホに接続するだけで、すぐにトレーニングを開始できます。",
         },
       ],
     },
@@ -168,7 +168,7 @@ export const site = {
     },
     mission: {
       eyebrow: "Mission",
-      title: "Master Endoscopy, Anytime, Anywhere。",
+      title: "Master Endoscopy, Anytime, Anywhere.",
       body: "VRシミュレーションアプリと専用コントローラーで構成される内視鏡トレーニングシミュレーター「MyEndoscope」を開発しています。内視鏡の技術を磨く医師に、いつでも・どこでも内視鏡の練習を提供し、医師のスキル向上、患者の安全性の向上、そしてグローバルな医療システムにおけるトレーニングギャップの解消を目指します。",
     },
     overview: {
@@ -199,7 +199,7 @@ export const site = {
     history: {
       eyebrow: "History",
       title: "沿革",
-      milestones: [{ date: "2026-08", title: "コーポレートサイトを公開" }],
+      milestones: [{ date: "2026-08-05", title: "コーポレートサイトを公開" }],
     },
   },
   recruitPage: {

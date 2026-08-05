@@ -8,7 +8,7 @@ export const site = {
   },
   product: {
     name: "MyEndoscope",
-    tagline: "内視鏡トレーニングDX",
+    tagline: "内視鏡トレーニングのDX",
   },
   nav: [
     { label: "News", href: "/news" },
@@ -18,7 +18,7 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    eyebrow: "OUR MISSION - 内視鏡トレーニングDX",
+    eyebrow: "OUR MISSION - 内視鏡トレーニングのDX",
     headline: "Master Endoscopy, Anytime, Anywhere.",
     body: "専用コントローラーとVRシミュレーションアプリで、内視鏡の実践練習をバーチャルに、一人で行えるシミュレーター「MyEndoscope」。環境の制約から、内視鏡技術の習得を解き放ちます。",
     cta: { label: "事業内容を見る", href: "/our-business" },
@@ -100,7 +100,7 @@ export const site = {
   },
   team: {
     eyebrow: "Team",
-    title: "医療、技術、体験。専門性が結集するチーム。",
+    title: "医療、技術、体験。\n専門性が結集するチーム。",
     body: "医療現場の課題を熟知したエキスパートと、先進テクノロジーの技術者が結集。トレーニング環境を根本から再設計しています。",
     cta: { label: "View More", href: "/about#team" },
   },
@@ -199,9 +199,7 @@ export const site = {
     history: {
       eyebrow: "History",
       title: "沿革",
-      milestones: [
-        { date: "2026-08", title: "コーポレートサイトを公開" },
-      ],
+      milestones: [{ date: "2026-08", title: "コーポレートサイトを公開" }],
     },
   },
   recruitPage: {

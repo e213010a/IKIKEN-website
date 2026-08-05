@@ -13,7 +13,7 @@ export function HowItWorks() {
               <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
                 {site.howItWorks.eyebrow}
               </p>
-              <h2 className="text-balance break-keep text-2xl font-medium leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl">
+              <h2 className="text-balance break-keep text-2xl font-bold leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl">
                 {site.howItWorks.title}
               </h2>
             </FadeIn>
@@ -27,7 +27,7 @@ export function HowItWorks() {
                     {step.step}
                   </span>
                   <div>
-                    <h3 className="text-lg font-medium tracking-[0.15em] text-navy-950">{step.title}</h3>
+                    <h3 className="text-lg font-bold tracking-[0.15em] text-navy-950">{step.title}</h3>
                     <p className="mt-3 max-w-md text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
                       {step.body}
                     </p>

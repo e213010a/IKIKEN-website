@@ -19,7 +19,7 @@ export function Mission({ eyebrow, title, body }: MissionProps) {
           <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h2 className="text-balance break-keep text-2xl font-medium leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
+          <h2 className="text-balance break-keep text-2xl font-bold leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
             {title}
           </h2>
           <p className="mt-8 text-sm leading-loose tracking-[0.15em] text-ink-muted sm:text-base">{body}</p>

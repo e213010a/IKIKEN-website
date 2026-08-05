@@ -26,6 +26,8 @@
 @theme inline {
   --font-sans: "Gothic A1", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --font-heading: "Zen Kaku Gothic New", "Gothic A1", -apple-system, BlinkMacSystemFont,
+    sans-serif;
 
   --color-navy-950: var(--color-navy-950);
   --color-navy-900: var(--color-navy-900);
@@ -62,6 +64,15 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   letter-spacing: 0.15em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
 
 @media (prefers-reduced-motion: reduce) {

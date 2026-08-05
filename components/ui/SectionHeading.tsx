@@ -39,7 +39,7 @@ export function SectionHeading({
       )}
       <h2
         className={clsx(
-          "whitespace-pre-line text-balance break-keep text-2xl font-medium leading-[1.4] tracking-[0.15em] sm:text-3xl lg:text-4xl",
+          "whitespace-pre-line text-balance break-keep text-2xl font-bold leading-[1.4] tracking-[0.15em] sm:text-3xl lg:text-4xl",
           isLight ? "text-white" : "text-navy-950",
         )}
       >

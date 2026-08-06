@@ -1,13 +1,16 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
+import clsx from "clsx";
 
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   body?: string;
+  image?: string;
 };
 
-export function PageHero({ eyebrow, title, body }: PageHeroProps) {
+export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-paper pb-24 pt-40 sm:pb-32 sm:pt-48">
       <div
@@ -19,19 +22,46 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
         aria-hidden
       />
       <Container className="relative">
-        <FadeIn>
-          <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
-            {eyebrow}
-          </p>
-          <h1 className="max-w-3xl text-balance text-3xl font-bold leading-[1.2] tracking-[0.15em] text-navy-950 sm:text-4xl lg:text-5xl">
-            {title}
-          </h1>
-          {body && (
-            <p className="mt-7 max-w-xl text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
-              {body}
+        <div className={clsx("grid items-center gap-14", image && "lg:grid-cols-[1.15fr_0.85fr] lg:gap-20")}>
+          <FadeIn>
+            <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+              {eyebrow}
             </p>
+            <h1
+              className={clsx(
+                "whitespace-pre-line text-balance text-3xl font-bold leading-[1.2] tracking-[0.15em] text-navy-950 sm:text-4xl",
+                image ? "lg:text-4xl" : "max-w-3xl lg:text-5xl",
+              )}
+            >
+              {title}
+            </h1>
+            {body && (
+              <p
+                className={clsx(
+                  "mt-7 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base",
+                  !image && "max-w-xl",
+                )}
+              >
+                {body}
+              </p>
+            )}
+          </FadeIn>
+
+          {image && (
+            <FadeIn delay={0.1}>
+              <div className="overflow-hidden border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
+                <Image
+                  src={image}
+                  alt=""
+                  width={1470}
+                  height={980}
+                  className="h-auto w-full object-cover"
+                  priority
+                />
+              </div>
+            </FadeIn>
           )}
-        </FadeIn>
+        </div>
       </Container>
     </section>
   );

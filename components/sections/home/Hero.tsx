@@ -35,7 +35,7 @@ export function Hero() {
             </FadeIn>
           </div>
 
-          <FadeIn delay={0.2} className="hidden lg:block">
+          <FadeIn delay={0.2}>
             <Parallax offset={40}>
               <div className="relative mx-auto w-full max-w-[33.6rem] overflow-hidden border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
                 <video

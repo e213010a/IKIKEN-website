@@ -125,6 +125,7 @@ export const site = {
       eyebrow: "Our Business",
       title: "MyEndoscopeで、\n内視鏡室をどこにでも。",
       body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC・スマホ画面と組み合わせ、実機に近い操作感と繰り返し練習できる環境を両立しました。",
+      image: "/product/our-business-hero.png",
     },
     app: {
       eyebrow: "VR Simulation App",

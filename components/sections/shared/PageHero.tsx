@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
+import { WavyDivider } from "@/components/ui/WavyDivider";
 import clsx from "clsx";
 
 type PageHeroProps = {
@@ -62,6 +63,8 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
             </FadeIn>
           )}
         </div>
+
+        <WavyDivider fullBleed className="mt-14 text-teal-500/40" />
       </Container>
     </section>
   );

@@ -75,6 +75,15 @@ h6 {
   font-family: var(--font-heading);
 }
 
+@keyframes wave-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

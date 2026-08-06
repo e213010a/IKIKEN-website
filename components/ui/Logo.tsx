@@ -10,9 +10,17 @@ type LogoProps = {
   scale?: number;
   /** 社名とIKEIKEN.Labを5秒ごとにフリップ表示する */
   animated?: boolean;
+  /** 社名の前に小さく「株式会社」を表示する */
+  legalPrefix?: boolean;
 };
 
-export function Logo({ variant = "dark", className, scale = 1, animated = false }: LogoProps) {
+export function Logo({
+  variant = "dark",
+  className,
+  scale = 1,
+  animated = false,
+  legalPrefix = false,
+}: LogoProps) {
   const isLight = variant === "light";
   return (
     <span
@@ -27,8 +35,9 @@ export function Logo({ variant = "dark", className, scale = 1, animated = false 
       {animated ? (
         <BrandNameFlip />
       ) : (
-        <span className="whitespace-nowrap font-serif text-[0.95em] tracking-[0.08em]">
-          {site.company.brand}
+        <span className="font-serif tracking-[0.08em]">
+          {legalPrefix && <span className="mr-2 whitespace-nowrap text-[0.55em]">株式会社</span>}
+          <span className="whitespace-nowrap text-[0.95em]">{site.company.brand}</span>
         </span>
       )}
     </span>

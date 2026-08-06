@@ -101,7 +101,7 @@ export const site = {
   },
   vision: {
     eyebrow: "Our Vision",
-    quote: "消化管がんで誰も死なない世界へ。",
+    quote: "消化管がんで失われる命のない世界へ。",
   },
   team: {
     eyebrow: "Team",
@@ -124,7 +124,7 @@ export const site = {
     hero: {
       eyebrow: "Our Business",
       title: "MyEndoscopeで、\n内視鏡室をどこにでも。",
-      body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC画面で操作でき、ヘッドセットは不要。実機に近い操作感と、繰り返し練習できる環境を両立しました。",
+      body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC・スマホ画面と組み合わせ、実機に近い操作感と繰り返し練習できる環境を両立しました。",
     },
     app: {
       eyebrow: "VR Simulation App",
@@ -180,14 +180,14 @@ export const site = {
       eyebrow: "Company",
       title: "会社概要",
       rows: [
-        { label: "商号", value: "株式会社医療継承研究所（IKEIKEN.Lab）" },
-        { label: "製品", value: "MyEndoscope（内視鏡トレーニングのDX）" },
+        { label: "商号", value: "医療継承研究所（IKEIKEN Labs）" },
+        { label: "製品", value: "MyEndoscope" },
         {
           label: "事業内容",
           value: "医療従事者向け内視鏡トレーニングシステムの開発・提供",
         },
-        { label: "所在地", value: "準備中" },
-        { label: "設立", value: "準備中" },
+        { label: "所在地", value: "東京都新宿区信濃町35　信濃町キャンパス2号館9階" },
+        { label: "設立", value: "2026年7月7日" },
         { label: "代表者", value: "準備中" },
       ],
     },

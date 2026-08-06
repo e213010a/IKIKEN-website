@@ -34,12 +34,12 @@ export const site = {
         image: "/illustrations/problem-shortage.png",
       },
       {
-        title: "訓練医：機会も指導の質も運任せ",
-        body: "訓練機会そのものが少ないうえ、指導の質はどの指導医に付くか次第という「指導医ガチャ」の状態です。",
+        title: "訓練医：「指導医ガチャ」の現状",
+        body: "訓練機会そのものが少ないうえ、指導の質はどの指導医に付くか次第という運任せの状態です。",
         image: "/illustrations/problem-gacha.png",
       },
       {
-        title: "指導医：指導の負担が大きい",
+        title: "指導医：指導の負担がのしかかる",
         body: "つきっきりの指導は指導医自身の診療時間を圧迫し、大きな負担となっています。",
         image: "/illustrations/problem-burden.png",
       },

@@ -44,7 +44,7 @@ export const site = {
   },
   solution: {
     eyebrow: "Solution",
-    title: "MyEndoscopeが、内視鏡室をどこにでも持ち運ぶ。",
+    title: "MyEndoscopeが、\n実践的なトレーニング環境を提供する。",
     body: "専用コントローラーと、PC・スマートフォン画面で動くVRシミュレーションアプリ。実機さながらの操作感を一人で体験できます。",
     features: [
       {
@@ -111,14 +111,14 @@ export const site = {
   },
   businessTeaser: {
     eyebrow: "Our Business",
-    title: "MyEndoscopeで、内視鏡室をどこにでも持ち運ぶ。",
+    title: "MyEndoscopeで、\n内視鏡室をどこにでも。",
     body: "専用コントローラーと、PC・スマートフォン画面で動くVRシミュレーションアプリ。実機さながらの操作感を一人で体験できます。",
     cta: { label: "View More", href: "/our-business" },
   },
   businessPage: {
     hero: {
       eyebrow: "Our Business",
-      title: "MyEndoscopeで、実践に近いトレーニングを。",
+      title: "MyEndoscopeで、\n内視鏡室をどこにでも。",
       body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC画面で操作でき、ヘッドセットは不要。実機に近い操作感と、繰り返し練習できる環境を両立しました。",
     },
     app: {

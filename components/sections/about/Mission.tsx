@@ -11,7 +11,7 @@ export function Mission({ eyebrow, title, body }: MissionProps) {
   return (
     <section className="relative overflow-hidden bg-paper-dim py-32 sm:py-40">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(32,199,181,0.14),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(32,199,181,0.14),transparent_55%)]"
         aria-hidden
       />
       <Container className="relative max-w-3xl">

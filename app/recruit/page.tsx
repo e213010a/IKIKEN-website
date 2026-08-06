@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RecruitPage() {
   return (
     <>
-      <PageHero {...site.recruitPage.hero} />
+      <PageHero {...site.recruitPage.hero} bodyWide />
       <Culture {...site.recruitPage.culture} />
       <Positions {...site.recruitPage.positions} />
     </>

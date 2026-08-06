@@ -52,7 +52,11 @@ export function Hero() {
         </div>
       </Container>
 
-      <WaveTransition className="absolute inset-x-0 bottom-0" fillClassName="fill-white" />
+      <WaveTransition
+        className="absolute inset-x-0 bottom-0"
+        fillClassName="fill-white"
+        strokeClassName="text-teal-500/50"
+      />
     </section>
   );
 }

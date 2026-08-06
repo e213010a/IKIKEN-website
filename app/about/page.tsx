@@ -16,7 +16,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero {...site.aboutPage.hero} />
+      <PageHero
+        {...site.aboutPage.hero}
+        transitionFillClassName="fill-paper-dim"
+        transitionGradient
+        bodyWide
+      />
       <Mission {...site.aboutPage.mission} />
       <Overview {...site.aboutPage.overview} />
       <TeamGrid id="team" members={team} {...site.aboutPage.team} />

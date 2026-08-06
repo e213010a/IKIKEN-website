@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { WavyDivider } from "@/components/ui/WavyDivider";
+import { WaveTransition } from "@/components/ui/WaveTransition";
 import clsx from "clsx";
 
 type PageHeroProps = {
@@ -9,9 +10,23 @@ type PageHeroProps = {
   title: string;
   body?: string;
   image?: string;
+  /** 波の下を塗りつぶし、次のセクションの背景色とシームレスにつなげる(Tailwindのfill-*クラス) */
+  transitionFillClassName?: string;
+  /** 次のセクションと同じradial-gradientの雰囲気を波の塗りつぶしに重ねる */
+  transitionGradient?: boolean;
+  /** 本文をmax-widthで絞らず、コンテナの横幅いっぱいに表示する */
+  bodyWide?: boolean;
 };
 
-export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  body,
+  image,
+  transitionFillClassName,
+  transitionGradient,
+  bodyWide,
+}: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-paper pb-0 pt-40 sm:pt-48">
       <div
@@ -39,8 +54,8 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
             {body && (
               <p
                 className={clsx(
-                  "mt-7 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base",
-                  image ? "max-w-[40rem]" : "max-w-xl",
+                  "mt-7 whitespace-pre-line text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base",
+                  image ? "max-w-[40rem]" : bodyWide ? "max-w-none" : "max-w-xl",
                 )}
               >
                 {body}
@@ -64,7 +79,16 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
           )}
         </div>
 
-        <WavyDivider fullBleed className="mt-4 text-teal-500/40" />
+        {transitionFillClassName ? (
+          <WaveTransition
+            fullBleed
+            className="mt-4"
+            fillClassName={transitionFillClassName}
+            gradientOverlay={transitionGradient}
+          />
+        ) : (
+          <WavyDivider fullBleed className="mt-4 text-teal-500/40" />
+        )}
       </Container>
     </section>
   );

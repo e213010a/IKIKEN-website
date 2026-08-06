@@ -24,7 +24,7 @@
 }
 
 @theme inline {
-  --font-sans: "Gothic A1", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Zen Kaku Gothic New", "Gothic A1", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", serif;
   --font-heading: "Zen Kaku Gothic New", "Gothic A1", -apple-system, BlinkMacSystemFont,
     sans-serif;

@@ -39,7 +39,7 @@ export const site = {
         image: "/illustrations/problem-gacha.png",
       },
       {
-        title: "指導医：重い指導の負担",
+        title: "指導医：指導負担の重さ",
         body: "つきっきりの指導は指導医自身の診療時間を圧迫し、大きな負担となっています。",
         image: "/illustrations/problem-burden.png",
       },

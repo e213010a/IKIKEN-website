@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Parallax } from "@/components/motion/Parallax";
-import { WavyDivider } from "@/components/ui/WavyDivider";
+import { WaveTransition } from "@/components/ui/WaveTransition";
 import { site } from "@/content/site";
 
 export function Hero() {
@@ -52,13 +52,7 @@ export function Hero() {
         </div>
       </Container>
 
-      <WavyDivider className="absolute inset-x-0 bottom-0 text-teal-500/40" />
-
-      <div className="absolute inset-x-0 bottom-14 flex justify-center">
-        <div className="flex h-9 w-6 items-start justify-center rounded-full border border-navy-950/20 p-1.5">
-          <span className="h-1.5 w-px animate-bounce bg-navy-950/50" />
-        </div>
-      </div>
+      <WaveTransition className="absolute inset-x-0 bottom-0" fillClassName="fill-white" />
     </section>
   );
 }

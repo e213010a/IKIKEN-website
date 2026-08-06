@@ -34,9 +34,9 @@ export function ValuePillars() {
                 <Image
                   src={pillar.image}
                   alt=""
-                  width={300}
-                  height={300}
-                  className="mx-auto mt-6 h-32 w-32 object-contain"
+                  width={400}
+                  height={400}
+                  className="mx-auto mt-6 h-64 w-64 object-contain"
                 />
               </div>
             </RevealItem>

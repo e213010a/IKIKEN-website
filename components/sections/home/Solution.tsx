@@ -13,11 +13,7 @@ export function Solution() {
       />
       <Container className="relative">
         <FadeIn>
-          <SectionHeading
-            eyebrow={site.solution.eyebrow}
-            title={site.solution.title}
-            body={site.solution.body}
-          />
+          <SectionHeading eyebrow={site.solution.eyebrow} title={site.solution.title} />
         </FadeIn>
 
         <Reveal className="mt-16 grid gap-6 lg:grid-cols-2" stagger={0.14}>

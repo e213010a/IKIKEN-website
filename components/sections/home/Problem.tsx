@@ -10,11 +10,10 @@ export function Problem() {
     <section className="bg-paper py-32 sm:py-40">
       <Container>
         <FadeIn>
-          <SectionHeading
-            eyebrow={site.problem.eyebrow}
-            title={site.problem.title}
-            body={site.problem.body}
-          />
+          <SectionHeading eyebrow={site.problem.eyebrow} title={site.problem.title} />
+          <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
+            {site.problem.body}
+          </p>
         </FadeIn>
 
         <Reveal className="mt-16 grid gap-6 sm:grid-cols-3" stagger={0.12}>

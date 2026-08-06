@@ -62,7 +62,7 @@ export const site = {
   },
   howItWorks: {
     eyebrow: "How It Works",
-    title: "3ステップで、実践トレーニングへ。",
+    title: "3ステップで、\n実践トレーニングへ。",
     steps: [
       {
         step: "01",
@@ -189,7 +189,10 @@ export const site = {
           label: "事業内容",
           value: "医療従事者向け内視鏡トレーニングシステムの開発・提供",
         },
-        { label: "所在地", value: "東京都新宿区信濃町35　信濃町キャンパス2号館9階" },
+        {
+          label: "所在地",
+          value: "東京都新宿区信濃町35　信濃町キャンパス2号館9階",
+        },
         { label: "設立", value: "2026年7月7日" },
         { label: "代表者", value: "準備中" },
       ],
@@ -213,7 +216,7 @@ export const site = {
   recruitPage: {
     hero: {
       eyebrow: "Recruit",
-      title: "医療DXの未来を、一緒につくる仲間へ。",
+      title: "医療DXの未来を、\n一緒につくる仲間へ。",
       body: "医療継承研究所は、医療とテクノロジーの両方に本気で向き合うチームです。内視鏡トレーニングのあり方を変える挑戦に、力を貸してください。",
     },
     culture: {

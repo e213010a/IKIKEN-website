@@ -22,15 +22,15 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
         aria-hidden
       />
       <Container className="relative">
-        <div className={clsx("grid items-center gap-14", image && "lg:grid-cols-[1.15fr_0.85fr] lg:gap-20")}>
+        <div className={clsx("grid items-center gap-14", image && "lg:grid-cols-[5fr_3fr] lg:gap-16")}>
           <FadeIn>
             <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
               {eyebrow}
             </p>
             <h1
               className={clsx(
-                "whitespace-pre-line text-balance text-3xl font-bold leading-[1.2] tracking-[0.15em] text-navy-950 sm:text-4xl",
-                image ? "lg:text-4xl" : "max-w-3xl lg:text-5xl",
+                "whitespace-pre-line text-balance text-3xl font-bold leading-[1.2] tracking-[0.15em] text-navy-950 sm:text-4xl lg:text-5xl",
+                !image && "max-w-3xl",
               )}
             >
               {title}
@@ -39,7 +39,7 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
               <p
                 className={clsx(
                   "mt-7 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base",
-                  !image && "max-w-xl",
+                  image ? "max-w-[40rem]" : "max-w-xl",
                 )}
               >
                 {body}

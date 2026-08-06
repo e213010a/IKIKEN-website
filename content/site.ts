@@ -130,6 +130,7 @@ export const site = {
       eyebrow: "VR Simulation App",
       title: "PC・スマートフォン画面で動く、VRシミュレーションアプリ。",
       body: "PC・スマホ画面で動作するVRシミュレーションアプリ。実際の内視鏡検査を忠実に再現した体内モデルと、世界最高峰の熟練医監修のコースウェアで、実践的な症例を練習できます。操作は指導医AIが常にモニタリングし、技能を自動評価します。",
+      image: "/product/app-screen.png",
       features: [
         {
           title: "熟練医監修のコースウェア",
@@ -149,6 +150,7 @@ export const site = {
       eyebrow: "Dedicated Controller",
       title: "実機に近いトルク感を、デスクトップで。",
       body: "内視鏡スコープの操作感を再現した専用コントローラー。PCに接続するだけで、実践さながらのシミュレーションを開始できます。",
+      image: "/product/controller-photo.png",
       features: [
         {
           title: "実機相当の操作感",

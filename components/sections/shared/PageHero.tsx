@@ -13,7 +13,7 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-paper pb-24 pt-40 sm:pb-32 sm:pt-48">
+    <section className="relative overflow-hidden bg-paper pb-0 pt-40 sm:pt-48">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,143,77,0.16),transparent_55%)]"
         aria-hidden
@@ -64,7 +64,7 @@ export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
           )}
         </div>
 
-        <WavyDivider fullBleed className="mt-14 text-teal-500/40" />
+        <WavyDivider fullBleed className="mt-4 text-teal-500/40" />
       </Container>
     </section>
   );

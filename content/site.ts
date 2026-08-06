@@ -89,11 +89,13 @@ export const site = {
         title: "Accessibility",
         titleJa: "アクセシビリティ",
         body: "場所や所属を問わず、世界中の医師・医療従事者が同じ品質のトレーニングにアクセスできる環境をつくります。",
+        image: "/illustrations/value-accessibility.png",
       },
       {
         title: "Efficiency",
         titleJa: "効率性",
         body: "限られた臨床時間の中でも、必要な症例・手技に絞って反復練習できる。上達までの時間を最短化します。",
+        image: "/illustrations/value-efficiency.png",
       },
     ],
   },

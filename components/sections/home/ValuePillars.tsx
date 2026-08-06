@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/motion/FadeIn";
@@ -21,11 +22,18 @@ export function ValuePillars() {
           {site.values.pillars.map((pillar) => (
             <RevealItem key={pillar.title}>
               <div className="h-full rounded-2xl bg-white p-10 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <span className="font-heading text-3xl font-bold tracking-[0.15em] text-teal-600">
+                <span className="block font-heading text-3xl font-bold tracking-[0.15em] text-teal-600">
                   {pillar.title}
                 </span>
                 <p className="mt-1 text-sm font-medium tracking-[0.15em] text-ink-muted">{pillar.titleJa}</p>
                 <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">{pillar.body}</p>
+                <Image
+                  src={pillar.image}
+                  alt=""
+                  width={192}
+                  height={192}
+                  className="mx-auto mt-6 h-32 w-32 object-contain"
+                />
               </div>
             </RevealItem>
           ))}

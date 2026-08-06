@@ -16,7 +16,7 @@ export function Hero() {
       </div>
 
       <Container className="relative">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <FadeIn>
               <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
@@ -37,7 +37,7 @@ export function Hero() {
 
           <FadeIn delay={0.2} className="hidden lg:block">
             <Parallax offset={40}>
-              <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
+              <div className="relative mx-auto w-full max-w-[33.6rem] overflow-hidden border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
                 <video
                   className="aspect-video w-full object-cover"
                   src="/video/demo-hero.mp4"

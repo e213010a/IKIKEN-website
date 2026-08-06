@@ -37,14 +37,16 @@ export function Hero() {
 
           <FadeIn delay={0.2} className="hidden lg:block">
             <Parallax offset={40}>
-              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm rounded-[2rem] border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
-                <div className="absolute inset-6 rounded-[1.5rem] border border-teal-500/20" />
-                <div className="absolute inset-x-10 top-10 h-px bg-gradient-to-r from-transparent via-teal-500/40 to-transparent" />
-                <div className="absolute inset-x-10 bottom-10 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-ink-muted/70">
-                  <span>{site.product.name}</span>
-                  <span>Controller</span>
-                </div>
-                <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-teal-300/40 to-coral-300/40 blur-2xl" />
+              <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-navy-950/8 bg-white shadow-[0_20px_60px_-15px_rgba(32,199,181,0.25)]">
+                <video
+                  className="aspect-video w-full object-cover"
+                  src="/video/demo-hero.mp4"
+                  poster="/video/demo-hero-poster.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
               </div>
             </Parallax>
           </FadeIn>

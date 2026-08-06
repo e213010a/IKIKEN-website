@@ -25,13 +25,17 @@ export function ValuePillars() {
                 <span className="block font-heading text-3xl font-bold tracking-[0.15em] text-teal-600">
                   {pillar.title}
                 </span>
-                <p className="mt-1 text-sm font-medium tracking-[0.15em] text-ink-muted">{pillar.titleJa}</p>
-                <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">{pillar.body}</p>
+                <p className="mt-1 text-sm font-medium tracking-[0.15em] text-ink-muted">
+                  {pillar.titleJa}
+                </p>
+                <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
+                  {pillar.body}
+                </p>
                 <Image
                   src={pillar.image}
                   alt=""
-                  width={192}
-                  height={192}
+                  width={300}
+                  height={300}
                   className="mx-auto mt-6 h-32 w-32 object-contain"
                 />
               </div>

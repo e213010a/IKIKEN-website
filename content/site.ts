@@ -2,7 +2,7 @@ export const site = {
   company: {
     legalName: "株式会社医療継承研究所",
     brand: "医療継承研究所",
-    brandEn: "IKEIKEN.Lab",
+    brandEn: "IKEIKEN Labs",
     tagline: "Master Endoscopy, Anytime, Anywhere.",
     taglineJa: "内視鏡を学ぶ環境に、制約はいらない。",
   },
@@ -34,12 +34,12 @@ export const site = {
         image: "/illustrations/problem-shortage.png",
       },
       {
-        title: "訓練医：「指導医ガチャ」の現状",
+        title: "訓練医：「指導医ガチャ」",
         body: "訓練機会そのものが少ないうえ、指導の質はどの指導医に付くか次第という運任せの状態です。",
         image: "/illustrations/problem-gacha.png",
       },
       {
-        title: "指導医：指導の負担がのしかかる",
+        title: "指導医：重い指導の負担",
         body: "つきっきりの指導は指導医自身の診療時間を圧迫し、大きな負担となっています。",
         image: "/illustrations/problem-burden.png",
       },

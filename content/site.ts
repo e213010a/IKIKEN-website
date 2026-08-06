@@ -31,14 +31,17 @@ export const site = {
       {
         title: "熟練医の不足",
         body: "診断から手術まで一貫して担える熟練医の数は、医療現場のニーズに対して圧倒的に不足しています。",
+        image: "/illustrations/problem-shortage.png",
       },
       {
         title: "訓練医：機会も指導の質も運任せ",
         body: "訓練機会そのものが少ないうえ、指導の質はどの指導医に付くか次第という「指導医ガチャ」の状態です。",
+        image: "/illustrations/problem-gacha.png",
       },
       {
         title: "指導医：指導の負担が大きい",
         body: "つきっきりの指導は指導医自身の診療時間を圧迫し、大きな負担となっています。",
+        image: "/illustrations/problem-burden.png",
       },
     ],
   },

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/motion/FadeIn";
@@ -20,7 +21,14 @@ export function Problem() {
           {site.problem.points.map((point) => (
             <RevealItem key={point.title}>
               <div className="h-full rounded-2xl border border-navy-950/8 bg-white p-8 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <h3 className="text-lg font-bold text-navy-950">{point.title}</h3>
+                <Image
+                  src={point.image}
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="h-16 w-16 object-contain"
+                />
+                <h3 className="mt-5 text-lg font-bold text-navy-950">{point.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">{point.body}</p>
               </div>
             </RevealItem>

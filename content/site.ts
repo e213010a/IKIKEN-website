@@ -87,7 +87,7 @@ export const site = {
     pillars: [
       {
         title: "Accessibility",
-        titleJa: "アクセシビリティ",
+        titleJa: "めちゃお手軽やん",
         body: "場所や所属を問わず、世界中の医師・医療従事者が同じ品質のトレーニングにアクセスできる環境をつくります。",
         image: "/illustrations/value-accessibility.png",
       },

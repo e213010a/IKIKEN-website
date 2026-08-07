@@ -22,22 +22,24 @@ export function Logo({
   legalPrefix = false,
 }: LogoProps) {
   const isLight = variant === "light";
+  const fullSize = 1.05 * scale;
+  const fontSize = legalPrefix ? `clamp(1.4rem, 4.5vw, ${fullSize}rem)` : `${fullSize}rem`;
   return (
     <span
-      style={{ fontSize: `${1.05 * scale}rem` }}
+      style={{ fontSize }}
       className={clsx(
         "inline-flex items-center gap-[0.6em]",
         isLight ? "text-white" : "text-navy-950",
         className,
       )}
     >
-      <LogoMark variant={variant} className="h-[1.3em] w-auto" />
+      <LogoMark variant={variant} className="h-[1.3em] w-auto shrink-0" />
       {animated ? (
         <BrandNameFlip />
       ) : (
-        <span className="font-serif tracking-[0.08em]">
-          {legalPrefix && <span className="mr-2 whitespace-nowrap text-[0.55em]">株式会社</span>}
-          <span className="whitespace-nowrap text-[0.95em]">{site.company.brand}</span>
+        <span className="whitespace-nowrap font-serif tracking-[0.08em]">
+          {legalPrefix && <span className="mr-2 text-[0.55em]">株式会社</span>}
+          <span className="text-[0.95em]">{site.company.brand}</span>
         </span>
       )}
     </span>

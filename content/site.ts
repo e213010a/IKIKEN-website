@@ -21,7 +21,6 @@ export const site = {
     eyebrow: "OUR MISSION - 内視鏡トレーニングのDX",
     headline: "Master Endoscopy, Anytime, Anywhere.",
     body: "専用コントローラーとVRシミュレーションアプリで、内視鏡の実践練習をバーチャルに、一人で行えるシミュレーター「MyEndoscope」。環境の制約から、内視鏡技術の習得を解き放ちます。",
-    cta: { label: "事業内容を見る", href: "/our-business" },
   },
   problem: {
     eyebrow: "Problem",
@@ -48,7 +47,6 @@ export const site = {
   solution: {
     eyebrow: "Solution",
     title: "MyEndoscopeが、\n実践的なトレーニング環境を提供する。",
-    body: "専用コントローラーと、PC・スマートフォン画面で動くVRシミュレーションアプリ。実機さながらの操作感を一人で体験できます。",
     features: [
       {
         title: "ポータブル＆パーソナル",

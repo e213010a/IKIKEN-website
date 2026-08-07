@@ -192,7 +192,7 @@ export const site = {
           value: "東京都新宿区信濃町35　信濃町キャンパス2号館9階",
         },
         { label: "設立", value: "2026年7月7日" },
-        { label: "代表者", value: "準備中" },
+        { label: "代表者", value: "牛丸千晶" },
       ],
     },
     team: {

@@ -25,31 +25,34 @@ export function Hero() {
             </p>
           </FadeIn>
           <FadeIn delay={0.08}>
-            <h1 className="text-balance text-4xl font-bold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-5xl lg:text-6xl">
+            <h1
+              className="text-balance text-5xl font-extrabold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-6xl lg:text-7xl"
+              style={{ fontFamily: '"Nunito Sans", var(--font-sans)' }}
+            >
               {site.hero.headline}
             </h1>
           </FadeIn>
           <FadeIn delay={0.18}>
-            <p className="mt-8 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
+            <p className="mt-14 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
               {site.hero.body}
             </p>
           </FadeIn>
         </div>
-      </Container>
 
-      <FloatIn
-        className="pointer-events-none absolute right-[-4%] top-1/2 hidden w-[52rem] max-w-[60vw] -translate-y-1/2 lg:block"
-        delay={0.2}
-      >
-        <Image
-          src="/illustrations/hero-doctor.png"
-          alt=""
-          width={1620}
-          height={2160}
-          priority
-          className="h-auto w-full"
-        />
-      </FloatIn>
+        <FloatIn
+          className="relative mx-auto mt-10 w-full max-w-[16rem] sm:max-w-xs lg:pointer-events-none lg:absolute lg:right-[-4%] lg:top-1/2 lg:mt-0 lg:w-[52rem] lg:max-w-[60vw] lg:-translate-y-1/2"
+          delay={0.2}
+        >
+          <Image
+            src="/illustrations/hero-doctor.png"
+            alt=""
+            width={1620}
+            height={2160}
+            priority
+            className="h-auto w-full"
+          />
+        </FloatIn>
+      </Container>
 
       <WaveTransition
         className="absolute inset-x-0 bottom-0"

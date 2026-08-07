@@ -26,7 +26,7 @@ export function Hero() {
           </FadeIn>
           <FadeIn delay={0.08}>
             <h1
-              className="text-balance text-5xl font-extrabold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-6xl lg:text-7xl"
+              className="text-balance text-4xl font-extrabold leading-[1.15] tracking-[0.15em] text-navy-950 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: '"Nunito Sans", var(--font-sans)' }}
             >
               {site.hero.headline}

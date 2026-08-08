@@ -46,6 +46,7 @@ export function Logo({
           className={clsx(
             "whitespace-nowrap tracking-[0.08em]",
             locale === "ja" ? "font-serif" : "font-heading",
+            animated && "font-bold",
           )}
         >
           {legalPrefix && site.company.legalPrefix && (

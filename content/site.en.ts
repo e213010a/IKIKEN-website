@@ -107,7 +107,7 @@ export const site = {
   },
   vision: {
     eyebrow: "Our Vision",
-    quote: "A world where no one dies from a gastrointestinal cancer we could have caught in time.",
+    quote: "A world where no one dies from gastrointestinal cancer.",
   },
   team: {
     eyebrow: "Team",

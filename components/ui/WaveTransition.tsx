@@ -9,6 +9,8 @@ type WaveTransitionProps = {
   fillClassName?: string;
   /** 波の境界線の色。Tailwindのtext-*クラスなどをclassNameで指定(strokeはcurrentColor) */
   strokeClassName?: string;
+  /** 境界線の太さ(SVGのstroke-width値) */
+  strokeWidth?: string;
   /** Containerのpadding/max-widthを無視してビューポート全幅に広げる */
   fullBleed?: boolean;
   /** 塗りつぶしの上に、上から下へフェードするteal系グラデーションを重ねる */
@@ -33,6 +35,7 @@ function Track({
   responsiveClassName,
   fillClassName,
   strokeClassName,
+  strokeWidth = "3",
   gradientOverlay,
   gradientId,
 }: {
@@ -40,6 +43,7 @@ function Track({
   responsiveClassName: string;
   fillClassName: string;
   strokeClassName?: string;
+  strokeWidth?: string;
   gradientOverlay?: boolean;
   gradientId: string;
 }) {
@@ -72,7 +76,7 @@ function Track({
                 d={crestPath}
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="3"
+                strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 className={strokeClassName}
               />
@@ -88,6 +92,7 @@ export function WaveTransition({
   className,
   fillClassName = "fill-white",
   strokeClassName,
+  strokeWidth,
   fullBleed,
   gradientOverlay,
 }: WaveTransitionProps) {
@@ -103,6 +108,7 @@ export function WaveTransition({
         responsiveClassName="sm:hidden"
         fillClassName={fillClassName}
         strokeClassName={strokeClassName}
+        strokeWidth={strokeWidth}
         gradientOverlay={gradientOverlay}
         gradientId={`wave-gradient-mobile-${idBase}`}
       />
@@ -111,6 +117,7 @@ export function WaveTransition({
         responsiveClassName="hidden sm:block"
         fillClassName={fillClassName}
         strokeClassName={strokeClassName}
+        strokeWidth={strokeWidth}
         gradientOverlay={gradientOverlay}
         gradientId={`wave-gradient-desktop-${idBase}`}
       />

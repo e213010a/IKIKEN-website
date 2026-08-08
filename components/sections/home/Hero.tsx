@@ -7,14 +7,16 @@ import { site } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-paper pt-28 pb-20">
-      {/* ポップな装飾ビジュアル: 実写差し替え前提のプレースホルダー */}
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-paper pt-28 pb-20">
+      {/* 大空を意識した装飾ビジュアル: 雲と光のグラデーション */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rotate-6 rounded-[45%_55%_60%_40%/50%_45%_55%_50%] bg-gradient-to-br from-teal-300/50 to-coral-300/40 blur-[2px] sm:-right-20 sm:-top-24" />
-        <div className="absolute left-[8%] top-[22%] h-3 w-3 rotate-45 rounded-sm bg-coral-400/70" />
-        <div className="absolute left-[18%] top-[65%] h-2 w-2 rounded-full bg-teal-500/60" />
-        <div className="absolute right-[30%] top-[15%] h-2.5 w-2.5 rotate-45 rounded-sm bg-teal-400/60" />
-        <div className="absolute bottom-[18%] right-[12%] h-4 w-4 rotate-12 rounded-sm bg-coral-300/60" />
+        <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rotate-6 rounded-[45%_55%_60%_40%/50%_45%_55%_50%] bg-gradient-to-br from-sky-200/70 to-teal-200/40 blur-[2px] sm:-right-20 sm:-top-24" />
+        <div className="absolute left-[6%] top-[18%] h-16 w-28 rounded-full bg-white/80 blur-[1px]" />
+        <div className="absolute left-[10%] top-[24%] h-10 w-20 rounded-full bg-white/70 blur-[1px]" />
+        <div className="absolute left-[22%] top-[60%] h-12 w-24 rounded-full bg-white/70 blur-[1px]" />
+        <div className="absolute left-[26%] top-[65%] h-8 w-16 rounded-full bg-white/60 blur-[1px]" />
+        <div className="absolute right-[8%] top-[12%] h-10 w-20 rounded-full bg-white/70 blur-[1px]" />
+        <div className="absolute bottom-[20%] right-[6%] h-9 w-16 rounded-full bg-white/60 blur-[1px]" />
       </div>
 
       <Container className="relative">
@@ -57,7 +59,8 @@ export function Hero() {
       <WaveTransition
         className="absolute inset-x-0 bottom-0"
         fillClassName="fill-white"
-        strokeClassName="text-teal-500/50"
+        strokeClassName="text-sky-300"
+        strokeWidth="1"
       />
     </section>
   );

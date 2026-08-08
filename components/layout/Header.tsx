@@ -72,34 +72,43 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           </Button>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? site.ui.closeMenu : site.ui.openMenu}
-          aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-navy-950 md:hidden"
-        >
-          <span className="relative block h-4 w-5">
-            <span
-              className={clsx(
-                "absolute left-0 top-0 h-px w-full bg-current transition-transform duration-300",
-                open && "translate-y-[7px] rotate-45",
-              )}
-            />
-            <span
-              className={clsx(
-                "absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-opacity duration-300",
-                open && "opacity-0",
-              )}
-            />
-            <span
-              className={clsx(
-                "absolute bottom-0 left-0 h-px w-full bg-current transition-transform duration-300",
-                open && "-translate-y-[7px] -rotate-45",
-              )}
-            />
-          </span>
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <Link
+            href={switchHref}
+            className="text-sm font-semibold tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
+          >
+            {site.ui.switchLocaleLabel}
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? site.ui.closeMenu : site.ui.openMenu}
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center rounded-full text-navy-950"
+          >
+            <span className="relative block h-4 w-5">
+              <span
+                className={clsx(
+                  "absolute left-0 top-0 h-px w-full bg-current transition-transform duration-300",
+                  open && "translate-y-[7px] rotate-45",
+                )}
+              />
+              <span
+                className={clsx(
+                  "absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-opacity duration-300",
+                  open && "opacity-0",
+                )}
+              />
+              <span
+                className={clsx(
+                  "absolute bottom-0 left-0 h-px w-full bg-current transition-transform duration-300",
+                  open && "-translate-y-[7px] -rotate-45",
+                )}
+              />
+            </span>
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -114,13 +123,6 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
               {item.label}
             </Link>
           ))}
-          <Link
-            href={switchHref}
-            onClick={() => setOpen(false)}
-            className="py-3 text-base font-medium text-navy-950/90"
-          >
-            {site.ui.switchLocaleLabel}
-          </Link>
           <Button href={localizeHref("/contact", locale)} variant="primary" className="mt-3 w-full">
             {site.ui.contactCta}
           </Button>

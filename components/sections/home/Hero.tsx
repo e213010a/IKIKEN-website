@@ -7,7 +7,7 @@ import { site } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-paper pt-28 pb-20">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-sky-300 via-sky-200 to-sky-100 pt-28 pb-20">
       {/* 大空を意識した装飾ビジュアル: 雲と光のグラデーション */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rotate-6 rounded-[45%_55%_60%_40%/50%_45%_55%_50%] bg-gradient-to-br from-sky-200/70 to-teal-200/40 blur-[2px] sm:-right-20 sm:-top-24" />
@@ -56,12 +56,7 @@ export function Hero() {
         </FloatIn>
       </Container>
 
-      <WaveTransition
-        className="absolute inset-x-0 bottom-0"
-        fillClassName="fill-white"
-        strokeClassName="text-sky-300"
-        strokeWidth="1"
-      />
+      <WaveTransition className="absolute inset-x-0 bottom-0" fillClassName="fill-white" />
     </section>
   );
 }

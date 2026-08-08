@@ -121,7 +121,7 @@ export const site = {
   businessPage: {
     hero: {
       eyebrow: "Our Business",
-      title: "MyEndoscopeで、\n内視鏡室をどこにでも。",
+      title: "MyEndoscopeで、\n内視鏡室を‖どこにでも。",
       body: "MyEndoscopeは、専用コントローラーとVRシミュレーションアプリで構成される内視鏡トレーニングシミュレーターです。PC・スマホ画面と組み合わせ、実機に近い操作感と繰り返し練習できる環境を両立しました。",
       image: "/product/our-business-hero.png",
     },
@@ -169,7 +169,7 @@ export const site = {
   aboutPage: {
     hero: {
       eyebrow: "About",
-      title: "医療継承研究所について",
+      title: "医療継承研究所‖について",
       body: "私たちは、内視鏡トレーニングにおけるアクセシビリティと効率性の課題に向き合う学生スタートアップです。",
     },
     mission: {

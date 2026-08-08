@@ -5,6 +5,13 @@ import { WavyDivider } from "@/components/ui/WavyDivider";
 import { WaveTransition } from "@/components/ui/WaveTransition";
 import clsx from "clsx";
 
+/** タイトル中の「‖」をスマホ幅のみで改行するbrに変換する(それ以外はtext-balanceに任せる) */
+function renderTitle(title: string) {
+  return title.split("‖").flatMap((part, i) =>
+    i === 0 ? [part] : [<br key={i} className="sm:hidden" />, part],
+  );
+}
+
 type PageHeroProps = {
   eyebrow: string;
   title: string;
@@ -49,7 +56,7 @@ export function PageHero({
                 !image && "max-w-3xl",
               )}
             >
-              {title}
+              {renderTitle(title)}
             </h1>
             {body && (
               <p

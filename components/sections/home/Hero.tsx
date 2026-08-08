@@ -40,7 +40,7 @@ export function Hero() {
         </div>
 
         <FloatIn
-          className="relative mx-auto mt-10 w-full max-w-[16rem] sm:max-w-xs lg:pointer-events-none lg:absolute lg:right-[-4%] lg:top-1/2 lg:mt-0 lg:w-[52rem] lg:max-w-[60vw] lg:-translate-y-1/2"
+          className="relative mx-auto mt-10 w-full max-w-[16rem] sm:max-w-[20rem] lg:pointer-events-none lg:absolute lg:right-[4%] lg:top-[42%] lg:mt-0 lg:w-[46rem] lg:max-w-[42vw] lg:-translate-y-1/2"
           delay={0.2}
         >
           <Image

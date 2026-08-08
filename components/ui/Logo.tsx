@@ -1,15 +1,16 @@
 import clsx from "clsx";
-import type { Site } from "@/content/site";
+import type { Site, Locale } from "@/content/site";
 import { BrandNameFlip } from "@/components/ui/BrandNameFlip";
 import { LogoMark } from "@/components/ui/LogoMark";
 
 type LogoProps = {
   site: Site;
+  locale: Locale;
   variant?: "dark" | "light";
   className?: string;
   /** 基準サイズ(1.05rem)に対する倍率 */
   scale?: number;
-  /** 社名とIKEIKEN.Labを5秒ごとにフリップ表示する */
+  /** 社名とIKEIKEN.Labを5秒ごとにフリップ表示する(日本語ロケールのみ有効) */
   animated?: boolean;
   /** 社名の前に小さく「株式会社」を表示する */
   legalPrefix?: boolean;
@@ -17,6 +18,7 @@ type LogoProps = {
 
 export function Logo({
   site,
+  locale,
   variant = "dark",
   className,
   scale = 1,
@@ -26,6 +28,7 @@ export function Logo({
   const isLight = variant === "light";
   const fullSize = 1.05 * scale;
   const fontSize = legalPrefix ? `clamp(1.4rem, 4.5vw, ${fullSize}rem)` : `${fullSize}rem`;
+  const showFlip = animated && locale === "ja";
   return (
     <span
       style={{ fontSize }}
@@ -36,10 +39,15 @@ export function Logo({
       )}
     >
       <LogoMark variant={variant} className="h-[1.3em] w-auto shrink-0" />
-      {animated ? (
+      {showFlip ? (
         <BrandNameFlip site={site} />
       ) : (
-        <span className="whitespace-nowrap font-serif tracking-[0.08em]">
+        <span
+          className={clsx(
+            "whitespace-nowrap tracking-[0.08em]",
+            locale === "ja" ? "font-serif" : "font-heading",
+          )}
+        >
           {legalPrefix && site.company.legalPrefix && (
             <span className="mr-2 text-[0.55em]">{site.company.legalPrefix}</span>
           )}

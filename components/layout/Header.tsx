@@ -45,7 +45,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           onClick={() => setOpen(false)}
           aria-label={`${site.company.brand} ${site.ui.homeAriaSuffix}`}
         >
-          <Logo site={site} variant="dark" scale={1.5} animated />
+          <Logo site={site} locale={locale} variant="dark" scale={1.5} animated />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

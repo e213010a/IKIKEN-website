@@ -10,7 +10,7 @@ export function Footer({ site, locale }: { site: Site; locale: Locale }) {
       <Container className="flex flex-col gap-12 py-16 sm:py-20">
         <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-start">
           <div className="max-w-sm">
-            <Logo site={site} variant="light" scale={2} legalPrefix />
+            <Logo site={site} locale={locale} variant="light" scale={2} legalPrefix />
           </div>
 
           <div className="flex flex-wrap gap-x-16 gap-y-8">

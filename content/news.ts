@@ -1,18 +1,14 @@
-export type NewsCategory = "Company" | "Product" | "Press";
+import { news as newsEn, type NewsItem, type NewsCategory } from "./news.en";
+import { news as newsJa } from "./news.ja";
+import type { Locale } from "./site";
 
-export type NewsItem = {
-  date: string; // YYYY-MM-DD
-  category: NewsCategory;
-  title: string;
-  href?: string; // 外部リンク（プレスリリース等）がある場合のみ
-  image?: string; // public/ からの画像パス。未指定の場合はプレースホルダーを表示
+export type { NewsItem, NewsCategory };
+
+const newsByLocale: Record<Locale, NewsItem[]> = {
+  en: newsEn,
+  ja: newsJa,
 };
 
-// 新しいお知らせは配列の先頭に追加してください（日付降順で表示されます）
-export const news: NewsItem[] = [
-  {
-    date: "2026-08-05",
-    category: "Company",
-    title: "コーポレートサイトを公開しました。",
-  },
-];
+export function getNews(locale: Locale): NewsItem[] {
+  return newsByLocale[locale];
+}

@@ -3,9 +3,9 @@ import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { FloatIn } from "@/components/motion/FloatIn";
 import { WaveTransition } from "@/components/ui/WaveTransition";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function Hero() {
+export function Hero({ site }: { site: Site }) {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-sky-300 via-sky-200 to-sky-100 pt-28 pb-20">
       {/* 大空を意識した装飾ビジュアル: 雲と光のグラデーション */}

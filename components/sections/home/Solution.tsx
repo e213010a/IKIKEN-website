@@ -2,9 +2,9 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function Solution() {
+export function Solution({ site }: { site: Site }) {
   return (
     <section className="relative overflow-hidden bg-paper-dim py-32 sm:py-40">
       <div

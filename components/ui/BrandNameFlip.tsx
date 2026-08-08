@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
 const FLIP_INTERVAL_MS = 5000;
 
-export function BrandNameFlip() {
+export function BrandNameFlip({ site }: { site: Site }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {

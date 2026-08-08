@@ -1,15 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
-import { site } from "@/content/site";
+import type { Site, Locale } from "@/content/site";
 
-export function Header() {
+function otherLocaleHref(pathname: string, locale: Locale): string {
+  if (locale === "en") {
+    return `/ja${pathname === "/" ? "" : pathname}`;
+  }
+  const stripped = pathname.replace(/^\/ja/, "");
+  return stripped === "" ? "/" : stripped;
+}
+
+export function Header({ site, locale }: { site: Site; locale: Locale }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -17,6 +27,8 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const switchHref = otherLocaleHref(pathname, locale);
 
   return (
     <header
@@ -28,8 +40,12 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
-        <Link href="/" onClick={() => setOpen(false)} aria-label={`${site.company.brand} ホーム`}>
-          <Logo variant="dark" scale={1.5} animated />
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          aria-label={`${site.company.brand} ${site.ui.homeAriaSuffix}`}
+        >
+          <Logo site={site} variant="dark" scale={1.5} animated />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -44,16 +60,22 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-5 md:flex">
+          <Link
+            href={switchHref}
+            className="text-sm font-semibold tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
+          >
+            {site.ui.switchLocaleLabel}
+          </Link>
           <Button href="/contact" variant="primary" className="px-6 py-2.5 text-sm">
-            お問い合わせ
+            {site.ui.contactCta}
           </Button>
         </div>
 
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+          aria-label={open ? site.ui.closeMenu : site.ui.openMenu}
           aria-expanded={open}
           className="flex h-10 w-10 items-center justify-center rounded-full text-navy-950 md:hidden"
         >
@@ -92,8 +114,15 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href={switchHref}
+            onClick={() => setOpen(false)}
+            className="py-3 text-base font-medium text-navy-950/90"
+          >
+            {site.ui.switchLocaleLabel}
+          </Link>
           <Button href="/contact" variant="primary" className="mt-3 w-full">
-            お問い合わせ
+            {site.ui.contactCta}
           </Button>
         </nav>
       )}

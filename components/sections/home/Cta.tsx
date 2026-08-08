@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function Cta() {
+export function Cta({ site }: { site: Site }) {
   return (
     <section className="relative overflow-hidden bg-paper-dim pb-32 pt-28 sm:pb-40 sm:pt-36">
       <div

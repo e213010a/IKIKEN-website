@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { NewsList } from "@/components/sections/news/NewsList";
-import { news } from "@/content/news";
-import { site } from "@/content/site";
+import type { NewsItem } from "@/content/news";
+import type { Site } from "@/content/site";
 
-export function NewsTeaser() {
+export function NewsTeaser({ site, news }: { site: Site; news: NewsItem[] }) {
   const latest = [...news].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
 
   if (latest.length === 0) return null;

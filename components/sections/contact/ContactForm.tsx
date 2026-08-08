@@ -3,11 +3,65 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
-import { contactInquiryTypes, contactRoles } from "@/lib/validation";
+import {
+  contactInquiryTypeKeys,
+  contactInquiryTypeLabels,
+  contactRoleKeys,
+  contactRoleLabels,
+} from "@/lib/validation";
+import type { Locale } from "@/content/site";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function ContactForm() {
+const copy: Record<
+  Locale,
+  {
+    name: string;
+    email: string;
+    inquiryType: string;
+    role: string;
+    organization: string;
+    message: string;
+    selectPlaceholder: string;
+    submit: string;
+    submitting: string;
+    successTitle: string;
+    successBody: string;
+    genericError: string;
+  }
+> = {
+  en: {
+    name: "Name",
+    email: "Email",
+    inquiryType: "Inquiry type",
+    role: "Your role",
+    organization: "Organization (optional)",
+    message: "Message",
+    selectPlaceholder: "Please select",
+    submit: "Send",
+    submitting: "Sending...",
+    successTitle: "Your message has been sent.",
+    successBody: "A member of our team will be in touch shortly.",
+    genericError: "Something went wrong. Please try again later.",
+  },
+  ja: {
+    name: "お名前",
+    email: "メールアドレス",
+    inquiryType: "お問い合わせ種別",
+    role: "ご職業",
+    organization: "ご所属（任意）",
+    message: "お問い合わせ内容",
+    selectPlaceholder: "選択してください",
+    submit: "送信する",
+    submitting: "送信中...",
+    successTitle: "お問い合わせを受け付けました。",
+    successBody: "担当者よりご連絡いたします。今しばらくお待ちください。",
+    genericError: "送信に失敗しました。時間をおいて再度お試しください。",
+  },
+};
+
+export function ContactForm({ locale }: { locale: Locale }) {
+  const t = copy[locale];
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -17,7 +71,7 @@ export function ContactForm() {
     setErrorMessage(null);
 
     const formData = new FormData(event.currentTarget);
-    const payload = Object.fromEntries(formData.entries());
+    const payload = { ...Object.fromEntries(formData.entries()), locale };
 
     try {
       const res = await fetch("/api/contact", {
@@ -28,13 +82,13 @@ export function ContactForm() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => null);
-        throw new Error(data?.error ?? "送信に失敗しました。時間をおいて再度お試しください。");
+        throw new Error(data?.error ?? t.genericError);
       }
 
       setStatus("success");
     } catch (err) {
       setStatus("error");
-      setErrorMessage(err instanceof Error ? err.message : "送信に失敗しました。");
+      setErrorMessage(err instanceof Error ? err.message : t.genericError);
     }
   }
 
@@ -45,10 +99,8 @@ export function ContactForm() {
         animate={{ opacity: 1, y: 0 }}
         className="rounded-2xl border border-teal-500/30 bg-teal-500/5 p-10 text-center"
       >
-        <p className="text-lg font-semibold text-navy-950">お問い合わせを受け付けました。</p>
-        <p className="mt-2 text-sm text-ink-muted">
-          担当者よりご連絡いたします。今しばらくお待ちください。
-        </p>
+        <p className="text-lg font-semibold text-navy-950">{t.successTitle}</p>
+        <p className="mt-2 text-sm text-ink-muted">{t.successBody}</p>
       </motion.div>
     );
   }
@@ -56,7 +108,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="お名前" htmlFor="name">
+        <Field label={t.name} htmlFor="name">
           <input
             id="name"
             name="name"
@@ -66,7 +118,7 @@ export function ContactForm() {
             className={inputClass}
           />
         </Field>
-        <Field label="メールアドレス" htmlFor="email">
+        <Field label={t.email} htmlFor="email">
           <input
             id="email"
             name="email"
@@ -79,33 +131,33 @@ export function ContactForm() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="お問い合わせ種別" htmlFor="inquiryType">
+        <Field label={t.inquiryType} htmlFor="inquiryType">
           <select id="inquiryType" name="inquiryType" required defaultValue="" className={inputClass}>
             <option value="" disabled>
-              選択してください
+              {t.selectPlaceholder}
             </option>
-            {contactInquiryTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
+            {contactInquiryTypeKeys.map((key) => (
+              <option key={key} value={key}>
+                {contactInquiryTypeLabels[locale][key]}
               </option>
             ))}
           </select>
         </Field>
-        <Field label="ご職業" htmlFor="role">
+        <Field label={t.role} htmlFor="role">
           <select id="role" name="role" required defaultValue="" className={inputClass}>
             <option value="" disabled>
-              選択してください
+              {t.selectPlaceholder}
             </option>
-            {contactRoles.map((role) => (
-              <option key={role} value={role}>
-                {role}
+            {contactRoleKeys.map((key) => (
+              <option key={key} value={key}>
+                {contactRoleLabels[locale][key]}
               </option>
             ))}
           </select>
         </Field>
       </div>
 
-      <Field label="ご所属（任意）" htmlFor="organization">
+      <Field label={t.organization} htmlFor="organization">
         <input
           id="organization"
           name="organization"
@@ -115,14 +167,8 @@ export function ContactForm() {
         />
       </Field>
 
-      <Field label="お問い合わせ内容" htmlFor="message">
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={6}
-          className={inputClass}
-        />
+      <Field label={t.message} htmlFor="message">
+        <textarea id="message" name="message" required rows={6} className={inputClass} />
       </Field>
 
       <AnimatePresence>
@@ -140,7 +186,7 @@ export function ContactForm() {
 
       <div>
         <Button type="submit" disabled={status === "submitting"} className="disabled:opacity-60">
-          {status === "submitting" ? "送信中..." : "送信する"}
+          {status === "submitting" ? t.submitting : t.submit}
         </Button>
       </div>
     </form>

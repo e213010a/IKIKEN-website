@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StickyPin } from "@/components/motion/StickyPin";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function HowItWorks() {
+export function HowItWorks({ site }: { site: Site }) {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container>

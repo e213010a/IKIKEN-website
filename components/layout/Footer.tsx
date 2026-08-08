@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function Footer() {
+export function Footer({ site }: { site: Site }) {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-navy-950 text-white/70">
       <Container className="flex flex-col gap-12 py-16 sm:py-20">
         <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-start">
           <div className="max-w-sm">
-            <Logo variant="light" scale={2} legalPrefix />
+            <Logo site={site} variant="light" scale={2} legalPrefix />
           </div>
 
           <div className="flex flex-wrap gap-x-16 gap-y-8">

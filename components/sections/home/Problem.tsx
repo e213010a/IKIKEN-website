@@ -3,9 +3,9 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 
-export function Problem() {
+export function Problem({ site }: { site: Site }) {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container>

@@ -2,10 +2,10 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { site } from "@/content/site";
-import { team } from "@/content/team";
+import type { Site } from "@/content/site";
+import type { TeamMember } from "@/content/team";
 
-export function TeamTeaser() {
+export function TeamTeaser({ site, team }: { site: Site; team: TeamMember[] }) {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">

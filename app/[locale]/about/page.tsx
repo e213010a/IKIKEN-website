@@ -5,15 +5,26 @@ import { Overview } from "@/components/sections/about/Overview";
 import { History } from "@/components/sections/about/History";
 import { TeamGrid } from "@/components/sections/team/TeamGrid";
 import { Cta } from "@/components/sections/home/Cta";
-import { site } from "@/content/site";
-import { team } from "@/content/team";
+import { getSite, resolveLocale } from "@/content/site";
+import { getTeam } from "@/content/team";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: site.aboutPage.hero.body,
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale = resolveLocale(rawLocale);
+  const site = getSite(locale);
+  return { title: "About", description: site.aboutPage.hero.body };
+}
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: rawLocale } = await params;
+  const locale = resolveLocale(rawLocale);
+  const site = getSite(locale);
+  const team = getTeam(locale);
+
   return (
     <>
       <PageHero
@@ -27,7 +38,7 @@ export default function AboutPage() {
       <TeamGrid id="team" members={team} {...site.aboutPage.team} />
       <Mission {...site.aboutPage.advisors} />
       <History {...site.aboutPage.history} />
-      <Cta />
+      <Cta site={site} />
     </>
   );
 }

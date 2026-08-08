@@ -1,9 +1,10 @@
 import clsx from "clsx";
-import { site } from "@/content/site";
+import type { Site } from "@/content/site";
 import { BrandNameFlip } from "@/components/ui/BrandNameFlip";
 import { LogoMark } from "@/components/ui/LogoMark";
 
 type LogoProps = {
+  site: Site;
   variant?: "dark" | "light";
   className?: string;
   /** 基準サイズ(1.05rem)に対する倍率 */
@@ -15,6 +16,7 @@ type LogoProps = {
 };
 
 export function Logo({
+  site,
   variant = "dark",
   className,
   scale = 1,
@@ -35,10 +37,12 @@ export function Logo({
     >
       <LogoMark variant={variant} className="h-[1.3em] w-auto shrink-0" />
       {animated ? (
-        <BrandNameFlip />
+        <BrandNameFlip site={site} />
       ) : (
         <span className="whitespace-nowrap font-serif tracking-[0.08em]">
-          {legalPrefix && <span className="mr-2 text-[0.55em]">株式会社</span>}
+          {legalPrefix && site.company.legalPrefix && (
+            <span className="mr-2 text-[0.55em]">{site.company.legalPrefix}</span>
+          )}
           <span className="text-[0.95em]">{site.company.brand}</span>
         </span>
       )}

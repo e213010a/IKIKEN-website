@@ -15,7 +15,6 @@ export const site = {
     { label: "News", href: "/news" },
     { label: "Our Business", href: "/our-business" },
     { label: "About", href: "/about" },
-    { label: "Recruit", href: "/recruit" },
     { label: "Contact", href: "/contact" },
   ],
   ui: {

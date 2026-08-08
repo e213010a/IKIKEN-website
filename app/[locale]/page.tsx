@@ -18,11 +18,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <Hero site={site} />
-      <NewsTeaser site={site} news={news} />
-      <BusinessTeaser site={site} />
+      <NewsTeaser site={site} news={news} locale={locale} />
+      <BusinessTeaser site={site} locale={locale} />
       <Vision eyebrow={site.vision.eyebrow} quote={site.vision.quote} />
-      <TeamTeaser site={site} team={team} />
-      <Cta site={site} />
+      <TeamTeaser site={site} team={team} locale={locale} />
+      <Cta site={site} locale={locale} />
     </>
   );
 }

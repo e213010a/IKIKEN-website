@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
-import type { Site, Locale } from "@/content/site";
+import { localizeHref, type Site, type Locale } from "@/content/site";
 
 function otherLocaleHref(pathname: string, locale: Locale): string {
   if (locale === "en") {
@@ -41,7 +41,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
         <Link
-          href="/"
+          href={localizeHref("/", locale)}
           onClick={() => setOpen(false)}
           aria-label={`${site.company.brand} ${site.ui.homeAriaSuffix}`}
         >
@@ -52,7 +52,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           {site.nav.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizeHref(item.href, locale)}
               className="text-sm font-medium tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
             >
               {item.label}
@@ -67,7 +67,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           >
             {site.ui.switchLocaleLabel}
           </Link>
-          <Button href="/contact" variant="primary" className="px-6 py-2.5 text-sm">
+          <Button href={localizeHref("/contact", locale)} variant="primary" className="px-6 py-2.5 text-sm">
             {site.ui.contactCta}
           </Button>
         </div>
@@ -107,7 +107,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           {site.nav.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizeHref(item.href, locale)}
               onClick={() => setOpen(false)}
               className="py-3 text-base font-medium text-navy-950/90"
             >
@@ -121,7 +121,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           >
             {site.ui.switchLocaleLabel}
           </Link>
-          <Button href="/contact" variant="primary" className="mt-3 w-full">
+          <Button href={localizeHref("/contact", locale)} variant="primary" className="mt-3 w-full">
             {site.ui.contactCta}
           </Button>
         </nav>

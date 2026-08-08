@@ -61,7 +61,7 @@ export default async function LocaleLayout({
       <body className="flex min-h-full flex-col bg-paper text-ink">
         <Header site={site} locale={locale} />
         <main className="flex-1">{children}</main>
-        <Footer site={site} />
+        <Footer site={site} locale={locale} />
       </body>
     </html>
   );

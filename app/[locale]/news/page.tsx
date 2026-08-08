@@ -27,7 +27,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
     <>
       <PageHero {...site.newsPage.hero} />
       <NewsGrid items={sorted} />
-      <Cta site={site} />
+      <Cta site={site} locale={locale} />
     </>
   );
 }

@@ -2,9 +2,17 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { NewsList } from "@/components/sections/news/NewsList";
 import type { NewsItem } from "@/content/news";
-import type { Site } from "@/content/site";
+import { localizeHref, type Site, type Locale } from "@/content/site";
 
-export function NewsTeaser({ site, news }: { site: Site; news: NewsItem[] }) {
+export function NewsTeaser({
+  site,
+  news,
+  locale,
+}: {
+  site: Site;
+  news: NewsItem[];
+  locale: Locale;
+}) {
   const latest = [...news].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
 
   if (latest.length === 0) return null;
@@ -22,7 +30,7 @@ export function NewsTeaser({ site, news }: { site: Site; news: NewsItem[] }) {
             </h2>
           </div>
           <Link
-            href={site.newsTeaser.cta.href}
+            href={localizeHref(site.newsTeaser.cta.href, locale)}
             className="text-xs text-ink-muted underline-offset-4 hover:text-navy-950 hover:underline"
           >
             {site.newsTeaser.cta.label}

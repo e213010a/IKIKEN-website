@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
-import type { Site } from "@/content/site";
+import { localizeHref, type Site, type Locale } from "@/content/site";
 
-export function Cta({ site }: { site: Site }) {
+export function Cta({ site, locale }: { site: Site; locale: Locale }) {
   return (
     <section className="relative overflow-hidden bg-paper-dim pb-32 pt-28 sm:pb-40 sm:pt-36">
       <div
@@ -23,7 +23,7 @@ export function Cta({ site }: { site: Site }) {
         </FadeIn>
         <FadeIn delay={0.2}>
           <div className="mt-10">
-            <Button href={site.cta.button.href} variant="primary">
+            <Button href={localizeHref(site.cta.button.href, locale)} variant="primary">
               {site.cta.button.label}
             </Button>
           </div>

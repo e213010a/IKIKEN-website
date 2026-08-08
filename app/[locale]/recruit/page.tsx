@@ -24,7 +24,11 @@ export default async function RecruitPage({ params }: { params: Promise<{ locale
     <>
       <PageHero {...site.recruitPage.hero} bodyWide />
       <Culture {...site.recruitPage.culture} />
-      <Positions {...site.recruitPage.positions} />
+      <Positions
+        {...site.recruitPage.positions}
+        contactCta={site.ui.contactCta}
+        locale={locale}
+      />
     </>
   );
 }

@@ -27,15 +27,15 @@ export const site = {
   hero: {
     eyebrow: "OUR MISSION - Endoscopy Training DX",
     headline: "Master Endoscopy, Anytime, Anywhere.",
-    body: "MyEndoscope is a training simulator combining a dedicated controller with a VR simulation app, letting you practice endoscopy hands-on, on your own. It frees the mastery of endoscopic skill from the constraints of place and equipment.",
+    body: "MyEndoscope is a training simulator combining a dedicated controller with a VR simulation app, letting you practice endoscopy hands-on, on your own. It frees endoscopic training from the constraints of location and specialized equipment.",
   },
   problem: {
     eyebrow: "Problem",
-    title: "There simply aren't enough environments to train endoscopists.",
+    title: "Training opportunities for endoscopists are severely limited.",
     body: "Environments where physicians can build end-to-end skill in endoscopic diagnosis and treatment remain far from adequate.",
     points: [
       {
-        title: "A shortage of experienced endoscopists",
+        title: "A shortage of skilled endoscopists",
         body: "The number of physicians who can handle diagnosis through treatment end-to-end falls far short of what healthcare actually needs.",
         image: "/illustrations/problem-shortage.png",
       },
@@ -110,7 +110,7 @@ export const site = {
   },
   team: {
     eyebrow: "Team",
-    title: "Medicine, technology, experience.\nExpertise, brought together.",
+    title: "Medicine, technology, experience.\nBringing together clinical expertise and technology.",
     body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
     cta: { label: "View More", href: "/about#team" },
   },
@@ -121,14 +121,14 @@ export const site = {
   },
   businessTeaser: {
     eyebrow: "Our Business",
-    title: "MyEndoscope brings\nthe endoscopy suite anywhere.",
+    title: "MyEndoscope brings\nthe endoscopy suite anywhere you are.",
     body: "A dedicated controller paired with a VR simulation app that runs on PC or smartphone. Practice the real feel of the procedure, on your own.",
     cta: { label: "View More", href: "/our-business" },
   },
   businessPage: {
     hero: {
       eyebrow: "Our Business",
-      title: "MyEndoscope brings\nthe endoscopy suite ‖anywhere.",
+      title: "MyEndoscope brings\nthe endoscopy suite ‖anywhere you are.",
       body: "MyEndoscope is an endoscopy training simulator built from a dedicated controller and a VR simulation app. Paired with a PC or smartphone screen, it delivers both a realistic feel and an environment for repeated practice.",
       image: "/product/our-business-hero.png",
     },
@@ -204,7 +204,7 @@ export const site = {
     },
     team: {
       eyebrow: "Team",
-      title: "Medicine, technology, experience. Expertise, brought together.",
+      title: "Medicine, technology, experience. Bringing together clinical expertise and technology.",
       body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
     },
     advisors: {

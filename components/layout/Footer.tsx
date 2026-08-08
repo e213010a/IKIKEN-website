@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import type { Site } from "@/content/site";
+import { localizeHref, type Site, type Locale } from "@/content/site";
 
-export function Footer({ site }: { site: Site }) {
+export function Footer({ site, locale }: { site: Site; locale: Locale }) {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-navy-950 text-white/70">
@@ -21,7 +21,10 @@ export function Footer({ site }: { site: Site }) {
               <ul className="flex flex-col gap-3">
                 {site.nav.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="text-sm text-white/70 hover:text-white">
+                    <Link
+                      href={localizeHref(item.href, locale)}
+                      className="text-sm text-white/70 hover:text-white"
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -45,7 +48,10 @@ export function Footer({ site }: { site: Site }) {
 
         <div className="flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.company.legalName}</p>
-          <p>&copy; {year} {site.company.legalName}. All rights reserved.</p>
+          <p>
+            &copy; {year} {site.company.legalName}
+            {site.company.legalName.endsWith(".") ? "" : "."} All rights reserved.
+          </p>
         </div>
       </Container>
     </footer>

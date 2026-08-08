@@ -37,7 +37,7 @@ export default async function OurBusinessPage({
       <ValuePillars site={site} />
       <FeatureSection {...site.businessPage.app} tone="light" />
       <FeatureSection {...site.businessPage.controller} tone="dim" reverse />
-      <Cta site={site} />
+      <Cta site={site} locale={locale} />
     </>
   );
 }

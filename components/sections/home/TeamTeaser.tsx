@@ -2,10 +2,18 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
-import type { Site } from "@/content/site";
+import { localizeHref, type Site, type Locale } from "@/content/site";
 import type { TeamMember } from "@/content/team";
 
-export function TeamTeaser({ site, team }: { site: Site; team: TeamMember[] }) {
+export function TeamTeaser({
+  site,
+  team,
+  locale,
+}: {
+  site: Site;
+  team: TeamMember[];
+  locale: Locale;
+}) {
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
@@ -28,7 +36,7 @@ export function TeamTeaser({ site, team }: { site: Site; team: TeamMember[] }) {
               </div>
             ))}
           </div>
-          <Button href={site.team.cta.href} variant="secondary">
+          <Button href={localizeHref(site.team.cta.href, locale)} variant="secondary">
             {site.team.cta.label}
           </Button>
         </FadeIn>

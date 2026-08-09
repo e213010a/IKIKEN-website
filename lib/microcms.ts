@@ -1,12 +1,10 @@
 import { createClient, type MicroCMSQueries } from "microcms-js-sdk";
 import type { Locale } from "@/content/site";
 
-export type NewsCategory = "Company" | "Product" | "Press";
-
 export type NewsItem = {
   id: string;
   date: string;
-  category: NewsCategory;
+  category: string;
   title: string;
   body?: string;
   image?: string;
@@ -15,9 +13,10 @@ export type NewsItem = {
 type NewsContent = {
   id: string;
   publishedAt: string;
+  date: string;
   title_JP: string;
   title_EN: string;
-  category: NewsCategory;
+  category: string[];
   image?: { url: string };
   body_JP?: string;
   body_EN?: string;
@@ -34,8 +33,8 @@ const REVALIDATE_SECONDS = 60;
 function toNewsItem(content: NewsContent, locale: Locale): NewsItem {
   return {
     id: content.id,
-    date: content.publishedAt.slice(0, 10),
-    category: content.category,
+    date: content.date || content.publishedAt.slice(0, 10),
+    category: content.category?.join(", ") ?? "",
     title: locale === "ja" ? content.title_JP : content.title_EN,
     body: locale === "ja" ? content.body_JP : content.body_EN,
     image: content.image?.url,

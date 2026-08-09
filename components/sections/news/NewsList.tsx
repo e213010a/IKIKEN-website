@@ -53,7 +53,7 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
                 )}
               </div>
             )}
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6">
+            <div className="flex min-w-0 flex-1 flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-6">
               <time
                 dateTime={item.date}
                 className={
@@ -73,7 +73,8 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
               </span>
               <p
                 className={
-                  isDark ? "text-sm text-white/90 sm:text-base" : "text-sm text-navy-950 sm:text-base"
+                  "min-w-0 flex-1 " +
+                  (isDark ? "text-sm text-white/90 sm:text-base" : "text-sm text-navy-950 sm:text-base")
                 }
               >
                 {item.title}

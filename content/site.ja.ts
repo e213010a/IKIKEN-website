@@ -22,7 +22,6 @@ export const site = {
     openMenu: "メニューを開く",
     closeMenu: "メニューを閉じる",
     homeAriaSuffix: "ホーム",
-    switchLocaleLabel: "EN",
   },
   hero: {
     eyebrow: "OUR MISSION - 内視鏡トレーニングのDX",

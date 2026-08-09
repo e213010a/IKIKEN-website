@@ -22,7 +22,6 @@ export const site = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     homeAriaSuffix: "Home",
-    switchLocaleLabel: "JP",
   },
   hero: {
     eyebrow: "OUR MISSION - Endoscopy Training DX",

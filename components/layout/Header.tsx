@@ -6,15 +6,8 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { LocaleSwitch } from "@/components/ui/LocaleSwitch";
 import { localizeHref, type Site, type Locale } from "@/content/site";
-
-function otherLocaleHref(pathname: string, locale: Locale): string {
-  if (locale === "en") {
-    return `/ja${pathname === "/" ? "" : pathname}`;
-  }
-  const stripped = pathname.replace(/^\/ja/, "");
-  return stripped === "" ? "/" : stripped;
-}
 
 export function Header({ site, locale }: { site: Site; locale: Locale }) {
   const [scrolled, setScrolled] = useState(false);
@@ -27,8 +20,6 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const switchHref = otherLocaleHref(pathname, locale);
 
   return (
     <header
@@ -61,24 +52,14 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <Link
-            href={switchHref}
-            className="text-sm font-semibold tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
-          >
-            {site.ui.switchLocaleLabel}
-          </Link>
+          <LocaleSwitch locale={locale} pathname={pathname} />
           <Button href={localizeHref("/contact", locale)} variant="primary" className="px-6 py-2.5 text-sm">
             {site.ui.contactCta}
           </Button>
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
-          <Link
-            href={switchHref}
-            className="text-sm font-semibold tracking-wide text-navy-950/70 transition-colors hover:text-navy-950"
-          >
-            {site.ui.switchLocaleLabel}
-          </Link>
+          <LocaleSwitch locale={locale} pathname={pathname} />
 
           <button
             type="button"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -26,15 +27,24 @@ export function TeamTeaser({
         </FadeIn>
 
         <FadeIn delay={0.12} className="flex shrink-0 flex-col items-start gap-6">
-          <div className="flex -space-x-3">
-            {team.map((member) => (
-              <div
-                key={member.id}
-                className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-paper bg-teal-300 text-sm font-semibold text-navy-950 ring-1 ring-navy-950/10"
-              >
-                {member.role.slice(0, 1)}
-              </div>
-            ))}
+          <div className="flex gap-3">
+            {team.map((member) =>
+              member.photo ? (
+                <div
+                  key={member.id}
+                  className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border-2 border-paper ring-1 ring-navy-950/10"
+                >
+                  <Image src={member.photo} alt="" fill className="object-cover object-center" sizes="96px" />
+                </div>
+              ) : (
+                <div
+                  key={member.id}
+                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border-2 border-paper bg-teal-300 text-xl font-semibold text-navy-950 ring-1 ring-navy-950/10"
+                >
+                  {member.name.slice(0, 1)}
+                </div>
+              ),
+            )}
           </div>
           <Button href={localizeHref(site.team.cta.href, locale)} variant="secondary">
             {site.team.cta.label}

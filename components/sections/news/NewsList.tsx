@@ -82,16 +82,7 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
 
         return (
           <RevealItem key={item.id}>
-            {item.href ? (
-              <Link
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition-opacity hover:opacity-70"
-              >
-                {row}
-              </Link>
-            ) : internalHref ? (
+            {internalHref ? (
               <Link href={internalHref} className="block transition-opacity hover:opacity-70">
                 {row}
               </Link>

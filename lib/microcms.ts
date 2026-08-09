@@ -9,7 +9,6 @@ export type NewsItem = {
   category: NewsCategory;
   title: string;
   body?: string;
-  href?: string;
   image?: string;
 };
 
@@ -22,7 +21,6 @@ type NewsContent = {
   image?: { url: string };
   body_JP?: string;
   body_EN?: string;
-  href?: string;
 };
 
 const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
@@ -40,7 +38,6 @@ function toNewsItem(content: NewsContent, locale: Locale): NewsItem {
     category: content.category,
     title: locale === "ja" ? content.title_JP : content.title_EN,
     body: locale === "ja" ? content.body_JP : content.body_EN,
-    href: content.href || undefined,
     image: content.image?.url,
   };
 }

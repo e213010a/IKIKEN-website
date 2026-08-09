@@ -50,16 +50,7 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
 
             return (
               <RevealItem key={item.id}>
-                {item.href ? (
-                  <Link
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block h-full"
-                  >
-                    {card}
-                  </Link>
-                ) : internalHref ? (
+                {internalHref ? (
                   <Link href={internalHref} className="block h-full">
                     {card}
                   </Link>

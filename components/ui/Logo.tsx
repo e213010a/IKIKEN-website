@@ -27,7 +27,9 @@ export function Logo({
 }: LogoProps) {
   const isLight = variant === "light";
   const fullSize = 1.05 * scale;
-  const fontSize = legalPrefix ? `clamp(1.4rem, 4.5vw, ${fullSize}rem)` : `${fullSize}rem`;
+  const fontSize = legalPrefix
+    ? `clamp(1.4rem, 4.5vw, ${fullSize}rem)`
+    : `clamp(1.1rem, 5.5vw, ${fullSize}rem)`;
   const showFlip = animated && locale === "ja";
   return (
     <span

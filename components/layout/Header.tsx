@@ -58,7 +58,7 @@ export function Header({ site, locale }: { site: Site; locale: Locale }) {
           </Button>
         </div>
 
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <LocaleSwitch locale={locale} pathname={pathname} />
 
           <button

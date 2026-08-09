@@ -37,7 +37,7 @@ export function LocaleSwitch({
         href={pathForLocale(pathname, locale, "en")}
         aria-current={!isJa ? "page" : undefined}
         className={clsx(
-          "relative z-10 w-8 rounded-full py-1 text-center transition-colors duration-300",
+          "relative z-10 w-7 rounded-full py-1 text-center transition-colors duration-300 sm:w-8",
           isJa ? "text-navy-950/50 hover:text-navy-950" : "text-white",
         )}
       >
@@ -47,7 +47,7 @@ export function LocaleSwitch({
         href={pathForLocale(pathname, locale, "ja")}
         aria-current={isJa ? "page" : undefined}
         className={clsx(
-          "relative z-10 w-8 rounded-full py-1 text-center transition-colors duration-300",
+          "relative z-10 w-7 rounded-full py-1 text-center transition-colors duration-300 sm:w-8",
           isJa ? "text-white" : "text-navy-950/50 hover:text-navy-950",
         )}
       >

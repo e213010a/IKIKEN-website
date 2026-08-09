@@ -13,13 +13,13 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
           {items.map((item) => {
             const card = (
               <div className="h-full overflow-hidden rounded-2xl border border-navy-950/8 bg-white transition-colors duration-300 hover:border-teal-500/30">
-                <div className="relative aspect-[4/3] bg-paper-dim">
+                <div className="relative aspect-[16/9] bg-paper-dim">
                   {item.image ? (
                     <Image
                       src={item.image}
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
                   ) : (

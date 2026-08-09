@@ -214,7 +214,6 @@ export const site = {
     history: {
       eyebrow: "History",
       title: "沿革",
-      milestones: [{ date: "2026-08-05", title: "コーポレートサイトを公開" }],
     },
   },
   recruitPage: {

@@ -214,7 +214,6 @@ export const site = {
     history: {
       eyebrow: "History",
       title: "History",
-      milestones: [{ date: "2026-08-05", title: "Launched our corporate website" }],
     },
   },
   recruitPage: {

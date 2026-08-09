@@ -1,13 +1,12 @@
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
-
-type Milestone = { date: string; title: string };
+import type { HistoryItem } from "@/lib/microcms";
 
 type HistoryProps = {
   eyebrow: string;
   title: string;
-  milestones: readonly Milestone[];
+  milestones: readonly HistoryItem[];
 };
 
 export function History({ eyebrow, title, milestones }: HistoryProps) {
@@ -25,7 +24,7 @@ export function History({ eyebrow, title, milestones }: HistoryProps) {
 
         <Reveal className="mt-12 divide-y divide-navy-950/10 border-t border-navy-950/10" stagger={0.08}>
           {milestones.map((m) => (
-            <RevealItem key={m.date + m.title}>
+            <RevealItem key={m.id}>
               <div className="flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:gap-6">
                 <time className="shrink-0 text-sm tabular-nums tracking-[0.15em] text-ink-muted">
                   {m.date}

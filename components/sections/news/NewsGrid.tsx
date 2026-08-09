@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
-import { type NewsItem } from "@/content/news";
+import { type NewsItem } from "@/lib/microcms";
+import { localizeHref, type Locale } from "@/content/site";
 
-export function NewsGrid({ items }: { items: readonly NewsItem[] }) {
+export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale: Locale }) {
   return (
     <section className="bg-paper py-28 sm:py-36">
       <Container>
@@ -43,8 +44,12 @@ export function NewsGrid({ items }: { items: readonly NewsItem[] }) {
               </div>
             );
 
+            const internalHref = item.body
+              ? localizeHref(`/news/${item.id}`, locale)
+              : undefined;
+
             return (
-              <RevealItem key={item.date + item.title}>
+              <RevealItem key={item.id}>
                 {item.href ? (
                   <Link
                     href={item.href}
@@ -52,6 +57,10 @@ export function NewsGrid({ items }: { items: readonly NewsItem[] }) {
                     rel="noopener noreferrer"
                     className="block h-full"
                   >
+                    {card}
+                  </Link>
+                ) : internalHref ? (
+                  <Link href={internalHref} className="block h-full">
                     {card}
                   </Link>
                 ) : (

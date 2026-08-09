@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { NewsList } from "@/components/sections/news/NewsList";
-import type { NewsItem } from "@/content/news";
+import type { NewsItem } from "@/lib/microcms";
 import { localizeHref, type Site, type Locale } from "@/content/site";
 
 export function NewsTeaser({
@@ -37,7 +37,7 @@ export function NewsTeaser({
           </Link>
         </div>
         <div className="flex-1">
-          <NewsList items={latest} showImage />
+          <NewsList items={latest} locale={locale} showImage />
         </div>
       </Container>
     </section>

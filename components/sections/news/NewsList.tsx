@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
-import { type NewsItem } from "@/content/news";
+import { type NewsItem } from "@/lib/microcms";
+import { localizeHref, type Locale } from "@/content/site";
 
 type NewsListProps = {
   items: readonly NewsItem[];
+  locale: Locale;
   tone?: "light" | "dark";
   showImage?: boolean;
 };
 
-export function NewsList({ items, tone = "light", showImage = false }: NewsListProps) {
+export function NewsList({ items, locale, tone = "light", showImage = false }: NewsListProps) {
   const isDark = tone === "dark";
 
   return (
@@ -74,8 +76,12 @@ export function NewsList({ items, tone = "light", showImage = false }: NewsListP
           </div>
         );
 
+        const internalHref = item.body
+          ? localizeHref(`/news/${item.id}`, locale)
+          : undefined;
+
         return (
-          <RevealItem key={item.date + item.title}>
+          <RevealItem key={item.id}>
             {item.href ? (
               <Link
                 href={item.href}
@@ -83,6 +89,10 @@ export function NewsList({ items, tone = "light", showImage = false }: NewsListP
                 rel="noopener noreferrer"
                 className="block transition-opacity hover:opacity-70"
               >
+                {row}
+              </Link>
+            ) : internalHref ? (
+              <Link href={internalHref} className="block transition-opacity hover:opacity-70">
                 {row}
               </Link>
             ) : (

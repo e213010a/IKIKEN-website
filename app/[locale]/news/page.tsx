@@ -3,7 +3,7 @@ import { PageHero } from "@/components/sections/shared/PageHero";
 import { NewsGrid } from "@/components/sections/news/NewsGrid";
 import { Cta } from "@/components/sections/home/Cta";
 import { getSite, resolveLocale } from "@/content/site";
-import { getNews } from "@/content/news";
+import { getNewsList } from "@/lib/microcms";
 
 export async function generateMetadata({
   params,
@@ -20,13 +20,13 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
   const { locale: rawLocale } = await params;
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
-  const news = getNews(locale);
+  const news = await getNewsList(locale);
   const sorted = [...news].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <>
       <PageHero {...site.newsPage.hero} />
-      <NewsGrid items={sorted} />
+      <NewsGrid items={sorted} locale={locale} />
       <Cta site={site} locale={locale} />
     </>
   );

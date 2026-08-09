@@ -6,14 +6,14 @@ import { TeamTeaser } from "@/components/sections/home/TeamTeaser";
 import { Cta } from "@/components/sections/home/Cta";
 import { getSite, resolveLocale } from "@/content/site";
 import { getTeam } from "@/content/team";
-import { getNews } from "@/content/news";
+import { getNewsList } from "@/lib/microcms";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
   const team = getTeam(locale);
-  const news = getNews(locale);
+  const news = await getNewsList(locale);
 
   return (
     <>

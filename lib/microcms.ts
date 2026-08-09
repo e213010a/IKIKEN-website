@@ -76,3 +76,52 @@ export async function getNewsItem(id: string, locale: Locale): Promise<NewsItem 
     return null;
   }
 }
+
+export type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  photo: string | null;
+};
+
+type MemberContent = {
+  id: string;
+  name_JP: string;
+  name_EN: string;
+  role_JP: string;
+  role_EN: string;
+  bio_JP?: string;
+  bio_EN?: string;
+  photo?: { url: string };
+};
+
+function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
+  return {
+    id: content.id,
+    name: locale === "ja" ? content.name_JP : content.name_EN,
+    role: locale === "ja" ? content.role_JP : content.role_EN,
+    bio: (locale === "ja" ? content.bio_JP : content.bio_EN) ?? "",
+    photo: content.photo?.url ?? null,
+  };
+}
+
+export async function getMemberList(locale: Locale): Promise<TeamMember[]> {
+  if (!client) return [];
+
+  try {
+    const queries: MicroCMSQueries = {
+      orders: "publishedAt",
+      limit: 100,
+    };
+    const { contents } = await client.getList<MemberContent>({
+      endpoint: "member",
+      queries,
+      customRequestInit: { next: { revalidate: REVALIDATE_SECONDS } },
+    });
+    return contents.map((c) => toTeamMember(c, locale));
+  } catch (error) {
+    console.error("[microcms] failed to fetch member list:", error);
+    return [];
+  }
+}

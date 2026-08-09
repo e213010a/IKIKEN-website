@@ -6,7 +6,7 @@ import { History } from "@/components/sections/about/History";
 import { TeamGrid } from "@/components/sections/team/TeamGrid";
 import { Cta } from "@/components/sections/home/Cta";
 import { getSite, resolveLocale } from "@/content/site";
-import { getTeam } from "@/content/team";
+import { getMemberList } from "@/lib/microcms";
 
 export async function generateMetadata({
   params,
@@ -23,7 +23,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale: rawLocale } = await params;
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
-  const team = getTeam(locale);
+  const team = await getMemberList(locale);
 
   return (
     <>

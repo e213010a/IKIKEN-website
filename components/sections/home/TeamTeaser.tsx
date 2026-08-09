@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { localizeHref, type Site, type Locale } from "@/content/site";
-import type { TeamMember } from "@/content/team";
+import type { TeamMember } from "@/lib/microcms";
 
 export function TeamTeaser({
   site,
@@ -29,7 +29,7 @@ export function TeamTeaser({
           <div className="flex -space-x-3">
             {team.map((member) => (
               <div
-                key={member.name + member.role}
+                key={member.id}
                 className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-paper bg-teal-300 text-sm font-semibold text-navy-950 ring-1 ring-navy-950/10"
               >
                 {member.role.slice(0, 1)}

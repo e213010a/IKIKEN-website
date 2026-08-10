@@ -29,7 +29,7 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
             {showImage && (
               <div
                 className={
-                  "relative h-14 w-24 shrink-0 overflow-hidden rounded-lg " +
+                  "relative h-14 w-24 shrink-0 overflow-hidden rounded-lg lg:h-20 lg:w-36 " +
                   (isDark ? "bg-white/5" : "bg-paper-dim")
                 }
               >
@@ -39,7 +39,7 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
                     alt=""
                     fill
                     className="object-cover object-center"
-                    sizes="80px"
+                    sizes="(min-width: 1024px) 144px, 80px"
                   />
                 ) : (
                   <div

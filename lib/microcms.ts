@@ -61,7 +61,10 @@ export async function getNewsList(locale: Locale): Promise<NewsItem[]> {
   }
 }
 
-export async function getNewsItem(id: string, locale: Locale): Promise<NewsItem | null> {
+export async function getNewsItem(
+  id: string,
+  locale: Locale,
+): Promise<NewsItem | null> {
   if (!client) return null;
 
   try {

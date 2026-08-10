@@ -19,7 +19,11 @@ export async function generateMetadata({
   return { title: "About", description: site.aboutPage.hero.body };
 }
 
-export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale: rawLocale } = await params;
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
@@ -36,7 +40,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       />
       <Mission {...site.aboutPage.mission} />
       <Overview {...site.aboutPage.overview} />
-      <TeamGrid id="team" members={team} locale={locale} {...site.aboutPage.team} />
+      <TeamGrid
+        id="team"
+        members={team}
+        locale={locale}
+        {...site.aboutPage.team}
+      />
       <Mission {...site.aboutPage.advisors} />
       <History {...site.aboutPage.history} milestones={history} />
       <Cta site={site} locale={locale} />

@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { getSite, locales, resolveLocale, type Locale } from "@/content/site";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
         <Header site={site} locale={locale} />
         <main className="flex-1">{children}</main>
         <Footer site={site} locale={locale} />
+        <Analytics />
       </body>
     </html>
   );

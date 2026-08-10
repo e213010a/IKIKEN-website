@@ -83,6 +83,7 @@ export type TeamMember = {
   role: string;
   bio: string;
   photo: string | null;
+  romajiName?: string;
 };
 
 type MemberContent = {
@@ -103,6 +104,7 @@ function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
     role: locale === "ja" ? content.role_JP : content.role_EN,
     bio: (locale === "ja" ? content.bio_JP : content.bio_EN) ?? "",
     photo: content.photo?.url ?? null,
+    romajiName: locale === "ja" ? content.name_EN : undefined,
   };
 }
 

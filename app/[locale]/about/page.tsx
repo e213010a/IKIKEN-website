@@ -36,7 +36,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       />
       <Mission {...site.aboutPage.mission} />
       <Overview {...site.aboutPage.overview} />
-      <TeamGrid id="team" members={team} {...site.aboutPage.team} />
+      <TeamGrid id="team" members={team} locale={locale} {...site.aboutPage.team} />
       <Mission {...site.aboutPage.advisors} />
       <History {...site.aboutPage.history} milestones={history} />
       <Cta site={site} locale={locale} />

@@ -3,17 +3,19 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Reveal, RevealItem } from "@/components/motion/Reveal";
+import type { Locale } from "@/content/site";
 import { type TeamMember } from "@/lib/microcms";
 
 type TeamGridProps = {
   members: TeamMember[];
+  locale?: Locale;
   id?: string;
   eyebrow?: string;
   title?: string;
   body?: string;
 };
 
-export function TeamGrid({ members, id, eyebrow, title, body }: TeamGridProps) {
+export function TeamGrid({ members, locale, id, eyebrow, title, body }: TeamGridProps) {
   return (
     <section id={id} className="bg-paper py-28 sm:py-36">
       <Container>
@@ -42,7 +44,14 @@ export function TeamGrid({ members, id, eyebrow, title, body }: TeamGridProps) {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-navy-950">{member.name}</h3>
+                  <div className="flex flex-wrap items-baseline gap-2">
+                    <h3 className="text-lg font-bold text-navy-950">{member.name}</h3>
+                    {locale === "ja" && member.romajiName ? (
+                      <span className="text-[0.7rem] font-medium tracking-[0.2em] text-ink-muted/70">
+                        {member.romajiName}
+                      </span>
+                    ) : null}
+                  </div>
                   <p className="mt-1 text-sm font-medium text-teal-600">{member.role}</p>
                   <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink-muted">
                     {member.bio}

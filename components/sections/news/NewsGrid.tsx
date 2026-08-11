@@ -50,7 +50,7 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
           })}
         </div>
 
-        <Reveal className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
+        <Reveal key={activeTab} className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
           {filtered.map((item) => {
             const card = (
               <div className="h-full overflow-hidden rounded-2xl border border-navy-950/8 bg-white transition-colors duration-300 hover:border-teal-500/30">

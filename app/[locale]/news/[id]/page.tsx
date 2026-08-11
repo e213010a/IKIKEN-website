@@ -37,7 +37,7 @@ export default async function NewsDetailPage({
         aria-hidden
       />
       <Container className="relative max-w-3xl">
-        <FadeIn>
+        <FadeIn amount={0}>
           <Link
             href={localizeHref("/news", locale)}
             className="text-xs text-ink-muted underline-offset-4 hover:text-navy-950 hover:underline"

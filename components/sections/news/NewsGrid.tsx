@@ -1,3 +1,6 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -6,11 +9,49 @@ import { type NewsItem } from "@/lib/microcms";
 import { localizeHref, type Locale } from "@/content/site";
 
 export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale: Locale }) {
+  const [activeTab, setActiveTab] = useState<string>(
+    locale === "ja" ? "すべて" : "All",
+  );
+
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    items.forEach((it) => {
+      it.category?.split(",").map((c) => c.trim()).forEach((c) => c && set.add(c));
+    });
+    return Array.from(set);
+  }, [items]);
+
+  const tabs = useMemo(() => [locale === "ja" ? "すべて" : "All", ...categories], [categories, locale]);
+
+  const filtered = useMemo(() => {
+    if (activeTab === (locale === "ja" ? "すべて" : "All")) return items;
+    return items.filter((it) => it.category && it.category.includes(activeTab));
+  }, [items, activeTab, locale]);
+
   return (
     <section className="bg-paper py-28 sm:py-36">
       <Container>
+        <div className="mb-8 flex flex-wrap items-center gap-3">
+          {tabs.map((t) => {
+            const isActive = t === activeTab;
+            return (
+              <button
+                key={t}
+                onClick={() => setActiveTab(t)}
+                className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  isActive
+                    ? "bg-teal-600 text-white"
+                    : "bg-white/40 text-ink-muted hover:bg-white/60"
+                }`}
+              >
+                {t}
+              </button>
+            );
+          })}
+        </div>
+
         <Reveal className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
-          {items.map((item) => {
+          {filtered.map((item) => {
             const card = (
               <div className="h-full overflow-hidden rounded-2xl border border-navy-950/8 bg-white transition-colors duration-300 hover:border-teal-500/30">
                 <div className="relative aspect-[16/9] bg-paper-dim">
@@ -44,9 +85,7 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
               </div>
             );
 
-            const internalHref = item.body
-              ? localizeHref(`/news/${item.id}`, locale)
-              : undefined;
+            const internalHref = item.body ? localizeHref(`/news/${item.id}`, locale) : undefined;
 
             return (
               <RevealItem key={item.id}>

@@ -211,10 +211,7 @@ export const site = {
       title: "医療の最前線が、支えるチーム。",
       body: "世界的内視鏡医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
     },
-    history: {
-      eyebrow: "History",
-      title: "沿革",
-    },
+    
   },
   recruitPage: {
     hero: {

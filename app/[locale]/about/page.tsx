@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { Mission } from "@/components/sections/about/Mission";
 import { Overview } from "@/components/sections/about/Overview";
-import { History } from "@/components/sections/about/History";
 import { TeamGrid } from "@/components/sections/team/TeamGrid";
 import { Cta } from "@/components/sections/home/Cta";
 import { getSite, resolveLocale } from "@/content/site";
-import { getMemberList, getHistoryList } from "@/lib/microcms";
+import { getMemberList } from "@/lib/microcms";
 
 export async function generateMetadata({
   params,
@@ -28,7 +27,6 @@ export default async function AboutPage({
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
   const team = await getMemberList(locale);
-  const history = await getHistoryList(locale);
 
   return (
     <>
@@ -47,7 +45,6 @@ export default async function AboutPage({
         {...site.aboutPage.team}
       />
       <Mission {...site.aboutPage.advisors} />
-      <History {...site.aboutPage.history} milestones={history} />
       <Cta site={site} locale={locale} />
     </>
   );

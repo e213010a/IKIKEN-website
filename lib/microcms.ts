@@ -152,21 +152,3 @@ function toHistoryItem(content: HistoryContent, locale: Locale): HistoryItem {
   };
 }
 
-export async function getHistoryList(locale: Locale): Promise<HistoryItem[]> {
-  if (!client) return [];
-
-  try {
-    const queries: MicroCMSQueries = { limit: 100 };
-    const { contents } = await client.getList<HistoryContent>({
-      endpoint: "history",
-      queries,
-      customRequestInit: { next: { revalidate: REVALIDATE_SECONDS } },
-    });
-    return contents
-      .map((c) => toHistoryItem(c, locale))
-      .sort((a, b) => (a.date < b.date ? -1 : 1));
-  } catch (error) {
-    console.error("[microcms] failed to fetch history list:", error);
-    return [];
-  }
-}

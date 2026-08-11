@@ -211,10 +211,7 @@ export const site = {
       title: "Backed by the front line of medicine.",
       body: "Leading endoscopists and Key Opinion Leaders (KOLs) from major medical device companies serve as our advisors.",
     },
-    history: {
-      eyebrow: "History",
-      title: "History",
-    },
+    
   },
   recruitPage: {
     hero: {

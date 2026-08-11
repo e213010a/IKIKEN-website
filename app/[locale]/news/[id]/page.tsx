@@ -71,11 +71,15 @@ export default async function NewsDetailPage({
             </div>
           )}
 
-          {item.body && (
+          {item.body ? (
             <div
               className="prose prose-sm sm:prose-base mt-10 max-w-none text-ink-muted prose-headings:text-navy-950 prose-a:text-teal-600"
               dangerouslySetInnerHTML={{ __html: item.body }}
             />
+          ) : (
+            <div className="mt-10 rounded-md border border-navy-950/8 bg-white p-6 text-sm text-ink-muted">
+              記事本文はまだ登録されていません。管理画面で本文（JP/EN）を確認してください。
+            </div>
           )}
         </FadeIn>
       </Container>

@@ -85,7 +85,7 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
               </div>
             );
 
-            const internalHref = item.body ? localizeHref(`/news/${item.id}`, locale) : undefined;
+            const internalHref = localizeHref(`/news/${item.id}`, locale);
 
             return (
               <RevealItem key={item.id}>

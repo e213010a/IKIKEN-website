@@ -23,10 +23,10 @@ export function Culture({ eyebrow, title, points }: CultureProps) {
           {points.map((point) => (
             <RevealItem key={point.title}>
               <div className="h-full rounded-2xl border border-navy-950/8 bg-white p-8 shadow-[0_1px_2px_rgba(16,16,25,0.04)]">
-                <h3 className="text-lg font-bold tracking-[0.15em] text-navy-950">
+                <h3 className="text-lg font-bold tracking-[0.15em] text-navy-950 lg:text-xl">
                   {point.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
+                <p className="mt-3 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">
                   {point.body}
                 </p>
               </div>

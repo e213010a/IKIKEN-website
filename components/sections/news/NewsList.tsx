@@ -74,7 +74,9 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
               <p
                 className={
                   "min-w-0 flex-1 " +
-                  (isDark ? "text-sm text-white/90 sm:text-base" : "text-sm text-navy-950 sm:text-base")
+                  (isDark
+                    ? "text-sm text-white/90 sm:text-base lg:text-lg"
+                    : "text-sm text-navy-950 sm:text-base lg:text-lg")
                 }
               >
                 {item.title}

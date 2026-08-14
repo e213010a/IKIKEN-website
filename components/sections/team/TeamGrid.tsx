@@ -79,7 +79,7 @@ export function TeamGrid({
                 </div>
                 <div className="p-6">
                   <div className="flex flex-wrap items-baseline gap-2">
-                    <h3 className="text-lg font-bold text-navy-950">
+                    <h3 className="text-lg font-bold text-navy-950 lg:text-xl">
                       {member.name}
                     </h3>
                     {locale === "ja" && member.romajiName ? (
@@ -91,7 +91,7 @@ export function TeamGrid({
                   <p className="mt-1 text-sm font-medium text-teal-600">
                     {member.role}
                   </p>
-                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink-muted">
+                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-ink-muted sm:text-base lg:text-lg">
                     {member.bio}
                   </p>
                 </div>

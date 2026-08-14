@@ -61,7 +61,7 @@ export function PageHero({
             {body && (
               <p
                 className={clsx(
-                  "mt-7 whitespace-pre-line text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base",
+                  "mt-7 whitespace-pre-line text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg",
                   image ? "max-w-[40rem]" : bodyWide ? "max-w-none" : "max-w-xl",
                 )}
               >

@@ -31,7 +31,7 @@ export function FeatureSection({
           <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
-          <h2 className="text-balance text-2xl font-bold leading-[1.35] tracking-[0.15em] text-navy-950 sm:text-3xl">
+          <h2 className="text-balance text-2xl font-bold leading-[1.35] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
             {title}
           </h2>
         </FadeIn>
@@ -55,8 +55,8 @@ export function FeatureSection({
             {features.map((feature) => (
               <RevealItem key={feature.title}>
                 <div className="rounded-2xl border border-navy-950/8 bg-white p-7">
-                  <h3 className="text-base font-bold tracking-[0.15em] text-navy-950">{feature.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">{feature.body}</p>
+                  <h3 className="text-base font-bold tracking-[0.15em] text-navy-950 lg:text-lg">{feature.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">{feature.body}</p>
                 </div>
               </RevealItem>
             ))}

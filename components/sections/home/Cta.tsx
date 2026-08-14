@@ -17,7 +17,7 @@ export function Cta({ site, locale }: { site: Site; locale: Locale }) {
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="mx-auto mt-6 max-w-md whitespace-pre-line text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
+          <p className="mx-auto mt-6 max-w-md whitespace-pre-line text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">
             {site.cta.body}
           </p>
         </FadeIn>

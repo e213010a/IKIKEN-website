@@ -73,7 +73,7 @@ export default async function NewsDetailPage({
 
           {item.body ? (
             <div
-              className="prose prose-sm sm:prose-base mt-10 max-w-none text-ink-muted prose-headings:text-navy-950 prose-a:text-teal-600 prose-img:w-full prose-img:h-auto"
+              className="prose prose-sm sm:prose-base lg:prose-lg mt-10 max-w-none text-ink-muted prose-headings:text-navy-950 prose-a:text-teal-600 prose-img:w-full prose-img:h-auto"
               dangerouslySetInnerHTML={{ __html: item.body }}
             />
           ) : (

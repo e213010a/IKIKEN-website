@@ -35,7 +35,7 @@ export function Hero({ site }: { site: Site }) {
             </h1>
           </FadeIn>
           <FadeIn delay={0.18}>
-            <p className="mt-14 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base">
+            <p className="mt-14 max-w-lg text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">
               {site.hero.body}
             </p>
           </FadeIn>

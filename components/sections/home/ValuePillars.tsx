@@ -28,7 +28,7 @@ export function ValuePillars({ site }: { site: Site }) {
                 <p className="mt-1 text-sm font-medium tracking-[0.15em] text-ink-muted">
                   {pillar.titleJa}
                 </p>
-                <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted">
+                <p className="mt-6 text-sm leading-relaxed tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">
                   {pillar.body}
                 </p>
                 <Image

@@ -22,7 +22,7 @@ export function Mission({ eyebrow, title, body }: MissionProps) {
           <h2 className="text-balance text-2xl font-bold leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">
             {title}
           </h2>
-          <p className="mt-8 text-sm leading-loose tracking-[0.15em] text-ink-muted sm:text-base">{body}</p>
+          <p className="mt-8 text-sm leading-loose tracking-[0.15em] text-ink-muted sm:text-base lg:text-lg">{body}</p>
         </FadeIn>
       </Container>
     </section>

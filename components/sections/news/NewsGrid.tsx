@@ -78,7 +78,7 @@ export function NewsGrid({ items, locale }: { items: readonly NewsItem[]; locale
                       {item.category}
                     </span>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-navy-950 sm:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-navy-950 sm:text-base lg:text-lg">
                     {item.title}
                   </p>
                 </div>

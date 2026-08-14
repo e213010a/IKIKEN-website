@@ -48,7 +48,7 @@ export function SectionHeading({
       {body && (
         <p
           className={clsx(
-            "mt-6 max-w-2xl text-sm leading-relaxed tracking-[0.15em] sm:text-base",
+            "mt-6 max-w-2xl text-sm leading-relaxed tracking-[0.15em] sm:text-base lg:text-lg",
             align === "center" && "mx-auto",
             isLight ? "text-white/70" : "text-ink-muted",
           )}

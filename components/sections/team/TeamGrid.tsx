@@ -13,6 +13,22 @@ type TeamGridProps = {
   eyebrow?: string;
   title?: string;
   body?: string;
+  tone?: "teal" | "coral" | "navy";
+};
+
+const toneStyles: Record<NonNullable<TeamGridProps["tone"]>, { bg: string; glow: string }> = {
+  teal: {
+    bg: "bg-paper",
+    glow: "bg-[radial-gradient(ellipse_at_50%_0%,rgba(32,199,181,0.14),transparent_60%)]",
+  },
+  coral: {
+    bg: "bg-paper",
+    glow: "bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,143,77,0.16),transparent_60%)]",
+  },
+  navy: {
+    bg: "bg-paper-dim",
+    glow: "bg-[radial-gradient(ellipse_at_50%_0%,rgba(47,47,130,0.12),transparent_60%)]",
+  },
 };
 
 export function TeamGrid({
@@ -22,10 +38,13 @@ export function TeamGrid({
   eyebrow,
   title,
   body,
+  tone = "teal",
 }: TeamGridProps) {
+  const { bg, glow } = toneStyles[tone];
   return (
-    <section id={id} className="bg-paper py-28 sm:py-36">
-      <Container>
+    <section id={id} className={`relative overflow-hidden ${bg} py-28 sm:py-36`}>
+      <div className={`pointer-events-none absolute inset-0 ${glow}`} aria-hidden />
+      <Container className="relative">
         {title && (
           <FadeIn>
             <SectionHeading

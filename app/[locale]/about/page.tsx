@@ -45,18 +45,21 @@ export default async function AboutPage({
         id="team"
         members={engineers}
         locale={locale}
+        tone="teal"
         {...site.aboutPage.team}
       />
       <TeamGrid
         id="collaborators"
         members={collaborators}
         locale={locale}
+        tone="coral"
         {...site.aboutPage.collaborators}
       />
       <TeamGrid
         id="advisors"
         members={advisors}
         locale={locale}
+        tone="navy"
         {...site.aboutPage.advisors}
       />
       <Cta site={site} locale={locale} />

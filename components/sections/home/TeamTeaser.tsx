@@ -33,21 +33,21 @@ export function TeamTeaser({
         </FadeIn>
 
         <FadeIn delay={0.12} className="flex shrink-0 flex-col items-start gap-8">
-          <div className="flex gap-6">
+          <div className="flex gap-3 sm:gap-6">
             {founders.map((member) => (
-              <div key={member.id} className="flex w-28 shrink-0 flex-col items-center text-center sm:w-36">
+              <div key={member.id} className="flex w-20 shrink-0 flex-col items-center text-center sm:w-28 lg:w-36">
                 {member.photo ? (
-                  <div className="relative h-28 w-28 overflow-hidden rounded-2xl border-2 border-paper ring-1 ring-navy-950/10 sm:h-36 sm:w-36">
+                  <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-paper ring-1 ring-navy-950/10 sm:h-28 sm:w-28 lg:h-36 lg:w-36">
                     <Image
                       src={member.photo}
                       alt=""
                       fill
                       className="object-cover object-center"
-                      sizes="(min-width: 640px) 144px, 112px"
+                      sizes="(min-width: 1024px) 144px, (min-width: 640px) 112px, 80px"
                     />
                   </div>
                 ) : (
-                  <div className="flex h-28 w-28 items-center justify-center rounded-2xl border-2 border-paper bg-teal-300 text-2xl font-semibold text-navy-950 ring-1 ring-navy-950/10 sm:h-36 sm:w-36">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-paper bg-teal-300 text-2xl font-semibold text-navy-950 ring-1 ring-navy-950/10 sm:h-28 sm:w-28 lg:h-36 lg:w-36">
                     {member.name.slice(0, 1)}
                   </div>
                 )}

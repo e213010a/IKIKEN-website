@@ -216,6 +216,8 @@ export const site = {
       title: "Backed by the front line of medicine.",
       body: "Leading endoscopists and Key Opinion Leaders (KOLs) from major medical device companies serve as our advisors.",
     },
+    teamNote:
+      "Affiliations are provided for identification purposes only and do not imply institutional endorsement of MyEndoscope.",
   },
   recruitPage: {
     hero: {

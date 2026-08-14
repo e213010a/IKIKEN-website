@@ -4,6 +4,7 @@ import { Mission } from "@/components/sections/about/Mission";
 import { Overview } from "@/components/sections/about/Overview";
 import { TeamGrid } from "@/components/sections/team/TeamGrid";
 import { Cta } from "@/components/sections/home/Cta";
+import { Container } from "@/components/ui/Container";
 import { getSite, resolveLocale } from "@/content/site";
 import { getMemberList } from "@/lib/microcms";
 
@@ -62,6 +63,13 @@ export default async function AboutPage({
         tone="navy"
         {...site.aboutPage.advisors}
       />
+      <div className="bg-paper-dim pb-16">
+        <Container>
+          <p className="max-w-3xl text-xs leading-relaxed text-ink-muted/60">
+            {site.aboutPage.teamNote}
+          </p>
+        </Container>
+      </div>
       <Cta site={site} locale={locale} />
     </>
   );

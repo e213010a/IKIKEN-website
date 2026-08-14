@@ -216,6 +216,8 @@ export const site = {
       title: "医療の最前線が、支えるチーム。",
       body: "世界的内視鏡医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
     },
+    teamNote:
+      "記載された所属は各メンバーのプロフィール情報であり、所属機関によるMyEndoscopeまたは関連製品への公式な承認・推奨を示すものではありません。",
   },
   recruitPage: {
     hero: {

@@ -208,13 +208,13 @@ export const site = {
     },
     collaborators: {
       eyebrow: "Collaborators",
-      title: "Partners walking alongside us.",
-      body: "External collaborators supporting our research, validation, and business development.",
+      title: "Physicians supporting us from the clinical front line.",
+      body: "Endoscopists and surgeons who support training design, medical validation, research design, and evidence generation as clinical collaborators.",
     },
     advisors: {
       eyebrow: "Advisors",
-      title: "Backed by the front line of medicine.",
-      body: "Leading endoscopists and Key Opinion Leaders (KOLs) from major medical device companies serve as our advisors.",
+      title: "Backed by technology and strategy from outside.",
+      body: "Advisors providing guidance on surgical robotics, medical-engineering research, and global business expansion.",
     },
     teamNote:
       "Affiliations are provided for identification purposes only and do not imply institutional endorsement of MyEndoscope.",

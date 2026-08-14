@@ -102,8 +102,16 @@ type MemberContent = {
   bio_JP?: string;
   bio_EN?: string;
   photo?: { url: string };
-  category?: MemberCategory;
+  /** microCMS select field; may come back as a single string or an array, in any case. */
+  category?: string | string[];
 };
+
+function normalizeCategory(raw: string | string[] | undefined): MemberCategory | null {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  if (!value) return null;
+  const normalized = value.trim().toLowerCase();
+  return MEMBER_CATEGORIES.find((c) => c.toLowerCase() === normalized) ?? null;
+}
 
 function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
   return {
@@ -113,7 +121,7 @@ function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
     bio: (locale === "ja" ? content.bio_JP : content.bio_EN) ?? "",
     photo: content.photo?.url ?? null,
     romajiName: locale === "ja" ? content.name_EN : undefined,
-    category: content.category ?? null,
+    category: normalizeCategory(content.category),
   };
 }
 

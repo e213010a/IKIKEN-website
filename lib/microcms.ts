@@ -129,8 +129,9 @@ export async function getMemberList(locale: Locale): Promise<TeamMember[]> {
   if (!client) return [];
 
   try {
+    // orders を指定しない = microCMS管理画面で手動並び替えした順序を反映するが、
+    // APIのデフォルト順は管理画面の表示順と逆になるため反転する
     const queries: MicroCMSQueries = {
-      orders: "publishedAt",
       limit: 100,
     };
     const { contents } = await client.getList<MemberContent>({
@@ -138,7 +139,7 @@ export async function getMemberList(locale: Locale): Promise<TeamMember[]> {
       queries,
       customRequestInit: { next: { revalidate: REVALIDATE_SECONDS } },
     });
-    return contents.map((c) => toTeamMember(c, locale));
+    return contents.map((c) => toTeamMember(c, locale)).reverse();
   } catch (error) {
     console.error("[microcms] failed to fetch member list:", error);
     return [];

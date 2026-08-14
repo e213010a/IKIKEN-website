@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { NewsList } from "@/components/sections/news/NewsList";
 import type { NewsItem } from "@/lib/microcms";
 import { localizeHref, type Site, type Locale } from "@/content/site";
@@ -30,12 +30,13 @@ export function NewsTeaser({
         </div>
         <div className="flex-1">
           <NewsList items={latest} locale={locale} showImage />
-          <Link
+          <Button
             href={localizeHref(site.newsTeaser.cta.href, locale)}
-            className="mt-6 inline-block text-xs text-ink-muted underline-offset-4 hover:text-navy-950 hover:underline"
+            variant="secondary"
+            className="mt-6"
           >
             {site.newsTeaser.cta.label}
-          </Link>
+          </Button>
         </div>
       </Container>
     </section>

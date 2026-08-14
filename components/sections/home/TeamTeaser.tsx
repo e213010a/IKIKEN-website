@@ -6,6 +6,8 @@ import { FadeIn } from "@/components/motion/FadeIn";
 import { localizeHref, type Site, type Locale } from "@/content/site";
 import type { TeamMember } from "@/lib/microcms";
 
+const FOUNDER_ROLE_PATTERN = /共同創業者|co-founder/i;
+
 export function TeamTeaser({
   site,
   team,
@@ -15,6 +17,10 @@ export function TeamTeaser({
   team: TeamMember[];
   locale: Locale;
 }) {
+  const founders = team
+    .filter((member) => member.category === "Engineer" && FOUNDER_ROLE_PATTERN.test(member.role))
+    .slice(0, 3);
+
   return (
     <section className="bg-paper py-32 sm:py-40">
       <Container className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
@@ -26,25 +32,29 @@ export function TeamTeaser({
           />
         </FadeIn>
 
-        <FadeIn delay={0.12} className="flex shrink-0 flex-col items-start gap-6">
-          <div className="flex gap-3">
-            {team.map((member) =>
-              member.photo ? (
-                <div
-                  key={member.id}
-                  className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border-2 border-paper ring-1 ring-navy-950/10"
-                >
-                  <Image src={member.photo} alt="" fill className="object-cover object-center" sizes="96px" />
-                </div>
-              ) : (
-                <div
-                  key={member.id}
-                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border-2 border-paper bg-teal-300 text-xl font-semibold text-navy-950 ring-1 ring-navy-950/10"
-                >
-                  {member.name.slice(0, 1)}
-                </div>
-              ),
-            )}
+        <FadeIn delay={0.12} className="flex shrink-0 flex-col items-start gap-8">
+          <div className="flex gap-6">
+            {founders.map((member) => (
+              <div key={member.id} className="flex w-28 shrink-0 flex-col items-center text-center sm:w-36">
+                {member.photo ? (
+                  <div className="relative h-28 w-28 overflow-hidden rounded-2xl border-2 border-paper ring-1 ring-navy-950/10 sm:h-36 sm:w-36">
+                    <Image
+                      src={member.photo}
+                      alt=""
+                      fill
+                      className="object-cover object-center"
+                      sizes="(min-width: 640px) 144px, 112px"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex h-28 w-28 items-center justify-center rounded-2xl border-2 border-paper bg-teal-300 text-2xl font-semibold text-navy-950 ring-1 ring-navy-950/10 sm:h-36 sm:w-36">
+                    {member.name.slice(0, 1)}
+                  </div>
+                )}
+                <p className="mt-3 text-sm font-bold text-navy-950">{member.name}</p>
+                <p className="text-xs text-ink-muted">{member.role}</p>
+              </div>
+            ))}
           </div>
           <Button href={localizeHref(site.team.cta.href, locale)} variant="secondary">
             {site.team.cta.label}

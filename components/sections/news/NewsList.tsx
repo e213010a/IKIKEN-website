@@ -83,19 +83,13 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
           </div>
         );
 
-        const internalHref = item.body
-          ? localizeHref(`/news/${item.id}`, locale)
-          : undefined;
+        const internalHref = localizeHref(`/news/${item.id}`, locale);
 
         return (
           <RevealItem key={item.id}>
-            {internalHref ? (
-              <Link href={internalHref} className="block transition-opacity hover:opacity-70">
-                {row}
-              </Link>
-            ) : (
-              row
-            )}
+            <Link href={internalHref} className="block transition-opacity hover:opacity-70">
+              {row}
+            </Link>
           </RevealItem>
         );
       })}

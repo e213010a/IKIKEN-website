@@ -65,7 +65,7 @@ export function NewsList({ items, locale, tone = "light", showImage = false }: N
               </time>
               <span
                 className={
-                  "shrink-0 text-xs font-semibold uppercase tracking-[0.15em] " +
+                  "shrink-0 text-xs font-semibold uppercase tracking-[0.15em] lg:w-40 " +
                   (isDark ? "text-teal-300" : "text-teal-600")
                 }
               >

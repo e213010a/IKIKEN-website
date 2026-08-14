@@ -27,6 +27,9 @@ export default async function AboutPage({
   const locale = resolveLocale(rawLocale);
   const site = getSite(locale);
   const team = await getMemberList(locale);
+  const engineers = team.filter((member) => member.category === "Engineer");
+  const collaborators = team.filter((member) => member.category === "Collaborator");
+  const advisors = team.filter((member) => member.category === "Advisor");
 
   return (
     <>
@@ -40,11 +43,22 @@ export default async function AboutPage({
       <Overview {...site.aboutPage.overview} />
       <TeamGrid
         id="team"
-        members={team}
+        members={engineers}
         locale={locale}
         {...site.aboutPage.team}
       />
-      <Mission {...site.aboutPage.advisors} />
+      <TeamGrid
+        id="collaborators"
+        members={collaborators}
+        locale={locale}
+        {...site.aboutPage.collaborators}
+      />
+      <TeamGrid
+        id="advisors"
+        members={advisors}
+        locale={locale}
+        {...site.aboutPage.advisors}
+      />
       <Cta site={site} locale={locale} />
     </>
   );

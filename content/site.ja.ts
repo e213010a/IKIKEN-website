@@ -202,16 +202,20 @@ export const site = {
       ],
     },
     team: {
-      eyebrow: "Team",
+      eyebrow: "Engineer",
       title: "医療、技術、体験。専門性が結集するチーム。",
       body: "医療現場の課題を熟知したエキスパートと、先進テクノロジーの技術者が結集。トレーニング環境を根本から再設計しています。",
+    },
+    collaborators: {
+      eyebrow: "Collaborators",
+      title: "共に歩む、社外パートナー。",
+      body: "研究・実証・事業開発の各局面で、社外から伴走するコラボレーターたち。",
     },
     advisors: {
       eyebrow: "Advisors",
       title: "医療の最前線が、支えるチーム。",
       body: "世界的内視鏡医、医療機器大手のKOL（Key Opinion Leader）がアドバイザーとして参画しています。",
     },
-    
   },
   recruitPage: {
     hero: {

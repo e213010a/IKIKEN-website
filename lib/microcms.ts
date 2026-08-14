@@ -87,7 +87,11 @@ export type TeamMember = {
   bio: string;
   photo: string | null;
   romajiName?: string;
+  category: MemberCategory | null;
 };
+
+export const MEMBER_CATEGORIES = ["Engineer", "Collaborator", "Advisor"] as const;
+export type MemberCategory = (typeof MEMBER_CATEGORIES)[number];
 
 type MemberContent = {
   id: string;
@@ -98,6 +102,7 @@ type MemberContent = {
   bio_JP?: string;
   bio_EN?: string;
   photo?: { url: string };
+  category?: MemberCategory;
 };
 
 function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
@@ -108,6 +113,7 @@ function toTeamMember(content: MemberContent, locale: Locale): TeamMember {
     bio: (locale === "ja" ? content.bio_JP : content.bio_EN) ?? "",
     photo: content.photo?.url ?? null,
     romajiName: locale === "ja" ? content.name_EN : undefined,
+    category: content.category ?? null,
   };
 }
 

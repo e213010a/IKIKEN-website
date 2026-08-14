@@ -202,16 +202,20 @@ export const site = {
       ],
     },
     team: {
-      eyebrow: "Team",
+      eyebrow: "Engineer",
       title: "Medicine, technology, experience. Bringing together clinical expertise and technology.",
       body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
+    },
+    collaborators: {
+      eyebrow: "Collaborators",
+      title: "Partners walking alongside us.",
+      body: "External collaborators supporting our research, validation, and business development.",
     },
     advisors: {
       eyebrow: "Advisors",
       title: "Backed by the front line of medicine.",
       body: "Leading endoscopists and Key Opinion Leaders (KOLs) from major medical device companies serve as our advisors.",
     },
-    
   },
   recruitPage: {
     hero: {

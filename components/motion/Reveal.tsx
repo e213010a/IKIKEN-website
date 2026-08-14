@@ -10,9 +10,20 @@ type RevealProps = {
   className?: string;
   stagger?: number;
   once?: boolean;
+  /** Fraction of the container that must enter the viewport to trigger the reveal.
+   * Tall, variable-length lists (e.g. a grid with many items stacked to one column
+   * on mobile) can exceed the viewport enough that a high fraction is never
+   * satisfied, so the reveal would never fire. */
+  amount?: number;
 };
 
-export function Reveal({ children, className, stagger = 0.12, once = true }: RevealProps) {
+export function Reveal({
+  children,
+  className,
+  stagger = 0.12,
+  once = true,
+  amount = 0.25,
+}: RevealProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -20,7 +31,7 @@ export function Reveal({ children, className, stagger = 0.12, once = true }: Rev
       className={clsx("min-w-0", className)}
       initial={prefersReducedMotion ? false : "hidden"}
       whileInView="visible"
-      viewport={{ once, amount: 0.25 }}
+      viewport={{ once, amount }}
       variants={staggerContainer(stagger)}
     >
       {children}

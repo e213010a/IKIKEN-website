@@ -58,6 +58,7 @@ export function TeamGrid({
         <Reveal
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
           stagger={0.1}
+          amount={0}
         >
           {members.map((member) => (
             <RevealItem key={member.id}>

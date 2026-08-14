@@ -253,7 +253,7 @@ export const site = {
     hero: {
       eyebrow: "Contact",
       title: "Contact Us",
-      body: "Whether it's a question about the product or a conversation about adoption,\nwe'd love to hear from you.\nA member of our team will get back to you.",
+      body: "Whether it's a question about the product or a conversation about adoption, we'd love to hear from you. A member of our team will get back to you.",
     },
     directContact: { prefix: "You can also reach us directly by email at ", suffix: "." },
   },

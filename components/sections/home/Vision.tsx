@@ -18,12 +18,12 @@ export function Vision({ eyebrow, quote, tone = "light" }: VisionProps) {
       />
       <Container className="relative text-center">
         <FadeIn>
-          <p className="mb-8 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+          <p className="mb-8 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="mx-auto max-w-3xl text-balance font-heading text-xl font-bold leading-[1.8] tracking-[0.15em] text-navy-950 sm:text-2xl lg:text-[1.75rem]">
+          <p className="mx-auto max-w-3xl text-balance font-heading text-2xl font-bold leading-[1.8] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-[2rem]">
             {quote}
           </p>
         </FadeIn>

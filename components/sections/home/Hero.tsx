@@ -22,7 +22,7 @@ export function Hero({ site }: { site: Site }) {
       <Container className="relative">
         <div className="max-w-2xl">
           <FadeIn>
-            <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+            <p className="mb-6 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
               {site.hero.eyebrow}
             </p>
           </FadeIn>

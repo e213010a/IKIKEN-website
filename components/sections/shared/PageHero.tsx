@@ -47,7 +47,7 @@ export function PageHero({
       <Container className="relative">
         <div className={clsx("grid items-center gap-14", image && "lg:grid-cols-[5fr_3fr] lg:gap-16")}>
           <FadeIn>
-            <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+            <p className="mb-5 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
               {eyebrow}
             </p>
             <h1

@@ -14,7 +14,7 @@ export function Overview({ eyebrow, title, rows }: OverviewProps) {
     <section className="bg-paper py-32 sm:py-40">
       <Container className="max-w-3xl">
         <FadeIn>
-          <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+          <p className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
           <h2 className="text-2xl font-bold tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">{title}</h2>

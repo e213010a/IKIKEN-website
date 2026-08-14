@@ -28,7 +28,7 @@ export function FeatureSection({
     <section className={clsx("py-28 sm:py-36", tone === "dim" ? "bg-paper-dim" : "bg-paper")}>
       <Container>
         <FadeIn>
-          <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+          <p className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
             {eyebrow}
           </p>
           <h2 className="text-balance text-2xl font-bold leading-[1.35] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">

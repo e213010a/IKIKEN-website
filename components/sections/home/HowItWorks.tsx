@@ -10,7 +10,7 @@ export function HowItWorks({ site }: { site: Site }) {
         <div className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <StickyPin>
             <FadeIn>
-              <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-teal-600">
+              <p className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.15em] text-teal-600">
                 {site.howItWorks.eyebrow}
               </p>
               <h2 className="text-balance text-2xl font-bold leading-[1.4] tracking-[0.15em] text-navy-950 sm:text-3xl lg:text-4xl">

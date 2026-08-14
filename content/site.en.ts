@@ -115,7 +115,7 @@ export const site = {
   },
   newsTeaser: {
     eyebrow: "News",
-    title: "News",
+    title: "Hot Topics",
     cta: { label: "View More", href: "/news" },
   },
   businessTeaser: {
@@ -202,7 +202,7 @@ export const site = {
       ],
     },
     team: {
-      eyebrow: "Engineer",
+      eyebrow: "Engineers",
       title: "Medicine, technology, experience. Bringing together clinical expertise and technology.",
       body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
     },
@@ -260,7 +260,7 @@ export const site = {
   newsPage: {
     hero: {
       eyebrow: "News",
-      title: "News",
+      title: "Hot Topics",
       body: "Announcements and press releases from IKEIKEN Labs.",
     },
   },

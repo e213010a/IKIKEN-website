@@ -202,7 +202,7 @@ export const site = {
       ],
     },
     team: {
-      eyebrow: "Engineer",
+      eyebrow: "Engineers",
       title: "医療、技術、体験。専門性が結集するチーム。",
       body: "医療現場の課題を熟知したエキスパートと、先進テクノロジーの技術者が結集。トレーニング環境を根本から再設計しています。",
     },

@@ -197,8 +197,8 @@ export const site = {
           label: "所在地",
           value: "東京都新宿区信濃町35　信濃町キャンパス2号館9階",
         },
-        { label: "設立", value: "2026年7月7日" },
-        { label: "代表者", value: "牛丸智晶" },
+        { label: "設立", value: "2026年7月8日" },
+        { label: "代表者", value: "牛丸 智晶" },
       ],
     },
     team: {

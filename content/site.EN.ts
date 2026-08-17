@@ -109,7 +109,8 @@ export const site = {
   },
   team: {
     eyebrow: "Team",
-    title: "Medicine, technology, experience.\nBringing together clinical expertise and technology.",
+    title:
+      "Medicine, technology, experience.\nBringing together clinical expertise and technology.",
     body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
     cta: { label: "View More", href: "/about#team" },
   },
@@ -191,19 +192,22 @@ export const site = {
         { label: "Product", value: "MyEndoscope" },
         {
           label: "Business",
-          value: "Development and delivery of endoscopy training systems for medical professionals",
+          value:
+            "Development and delivery of endoscopy training systems for medical professionals",
         },
         {
           label: "Address",
-          value: "9F, Shinanomachi Campus Bldg. 2, 35 Shinanomachi, Shinjuku-ku, Tokyo",
+          value:
+            "9F, Shinanomachi Campus Bldg. 2, 35 Shinanomachi, Shinjuku-ku, Tokyo",
         },
-        { label: "Founded", value: "July 7, 2026" },
+        { label: "Founded", value: "July 8, 2026" },
         { label: "Representative", value: "Chiaki Ushimaru" },
       ],
     },
     team: {
       eyebrow: "Engineers",
-      title: "Medicine, technology, experience. Bringing together clinical expertise and technology.",
+      title:
+        "Medicine, technology, experience. Bringing together clinical expertise and technology.",
       body: "Experts who know clinical challenges firsthand, working alongside engineers on the technology frontier — redesigning training environments from the ground up.",
     },
     collaborators: {
@@ -255,7 +259,10 @@ export const site = {
       title: "Contact Us",
       body: "Whether it's a question about the product or a conversation about adoption, we'd love to hear from you. A member of our team will get back to you.",
     },
-    directContact: { prefix: "You can also reach us directly by email at ", suffix: "." },
+    directContact: {
+      prefix: "You can also reach us directly by email at ",
+      suffix: ".",
+    },
   },
   newsPage: {
     hero: {

@@ -25,7 +25,7 @@ npm run dev
 
 ```
 app/
-  [locale]/            各ページ（en/jaで共通。/, /our-business, /about, /recruit, /news, /news/[id], /contact）
+  [locale]/            各ページ（EN/JPで共通。/, /our-business, /about, /recruit, /news, /news/[id], /contact）
   api/contact/         お問い合わせフォームのAPI Route（ロケール非依存）
 components/
   layout/              Header, Footer

@@ -1,5 +1,5 @@
-import { site as siteEn } from "./site.en";
-import { site as siteJa } from "./site.ja";
+import { site as siteEn } from "./site.EN";
+import { site as siteJa } from "./site.JP";
 
 export const locales = ["en", "ja"] as const;
 export type Locale = (typeof locales)[number];
@@ -17,7 +17,9 @@ export function getSite(locale: Locale): Site {
 }
 
 export function resolveLocale(value: string): Locale {
-  return (locales as readonly string[]).includes(value) ? (value as Locale) : defaultLocale;
+  return (locales as readonly string[]).includes(value)
+    ? (value as Locale)
+    : defaultLocale;
 }
 
 /** サイト内部の相対パス(content内のhref)にロケールプレフィックスを付与する */

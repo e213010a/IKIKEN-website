@@ -255,7 +255,10 @@ export const site = {
       title: "お問い合わせ",
       body: "プロダクトについてのご質問、導入に関するご相談など、どんなことでもお気軽にお問い合わせください。担当者より折り返しご連絡いたします。",
     },
-    directContact: { prefix: "直接メールでのお問い合わせは ", suffix: " までお願いいたします。" },
+    directContact: {
+      prefix: "直接メールでのお問い合わせは ",
+      suffix: " までお願いいたします。",
+    },
   },
   newsPage: {
     hero: {

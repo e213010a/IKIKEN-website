@@ -22,7 +22,7 @@ export function BrandNameFlip({ site }: { site: Site }) {
       <span
         aria-hidden
         className={clsx(
-          "col-start-1 row-start-1 whitespace-nowrap font-serif font-bold tracking-[0.08em] transition-opacity duration-700 ease-in-out",
+          "col-start-1 row-start-1 whitespace-nowrap font-serif font-bold tracking-[0.08em] transition-opacity duration-[1400ms] ease-in-out",
           showEn ? "opacity-0" : "opacity-100",
         )}
       >
@@ -31,7 +31,7 @@ export function BrandNameFlip({ site }: { site: Site }) {
       <span
         aria-hidden
         className={clsx(
-          "col-start-1 row-start-1 whitespace-nowrap font-heading font-bold tracking-[0.08em] transition-opacity duration-700 ease-in-out",
+          "col-start-1 row-start-1 whitespace-nowrap font-heading font-bold tracking-[0.08em] transition-opacity duration-[1400ms] ease-in-out",
           showEn ? "opacity-100" : "opacity-0",
         )}
       >
